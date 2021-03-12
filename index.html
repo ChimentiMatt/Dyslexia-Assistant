@@ -1,0 +1,28 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <link rel="stylesheet" href="style.css">
+  <title>Form Validator</title>
+</head>
+<body>
+    <h1>Dyslexia Assistant</h1>
+    <input type="text" class="inputField" id="inputField" placeholder="Paste Here" >
+
+    <button onclick="dyslexiaConverter()">Convert it</button>
+    <button onclick="clearConverter()">Clear Text</button>
+
+    <div class="fontControlContainer">
+        <h2 id="fontSizeP">Font Size</h2>
+        <button id="fontBtnIncrease" onclick="increaseSize()">+</button>
+        <button id="fontBtnDecrease" onclick="decreaseSize()">-</button>
+    </div>
+    <p id="outputText"></p>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
