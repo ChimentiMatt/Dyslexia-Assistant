@@ -4,38 +4,72 @@ let alphanumeric = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
 "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p",
 "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4",
 "5", "6", "7", "8", "9", "!", "@", "#", "$", "%", "^", "&", "8", "(", ")",
-"-", "=", ",", ".", ";", "'", ":", "—" ]
+"-", "=", ",", ".", ";", "'", ":", "—", "?" ]
  
 function dyslexiaConverter() {
     let initialText = document.getElementById('inputField').value;
     let convertedText = ''
     let counterNewWord = 0
+    // Two Spaces is essentially a new paragraph for most copy and paste
+    let twoSpaces = 0
     for (let i in initialText) {
-        if (counterNewWord == 0){
+        // Detect if it is a new word then appends the first letter such as "A"
+        if (counterNewWord == 0 && twoSpaces != 2){
             convertedText += initialText[i] 
             counterNewWord += 1
-        } else if (alphanumeric.includes(initialText[i]) && counterNewWord != 0){
+            twoSpaces = 0
+        // Add a space between words while appending the letter or symbol such as "A p p l e"
+        } else if (alphanumeric.includes(initialText[i]) && counterNewWord != 0 && twoSpaces != 2){
             convertedText += ' ' + initialText[i] 
-        } else if (initialText[i] == ' '){
+            twoSpaces = 0
+        // If it is a new word at multiple spacessuch as "A p p l e     s o u r"
+        } else if (initialText[i] == ' ' && twoSpaces != 2){
             convertedText += '\xa0'+ '\xa0'+ '\xa0' + '\xa0'+ '\xa0'+ '\xa0'
-
-            counterNewWord = 0
+            counterNewWord += 1
+            twoSpaces += 1
+        
+        } else if (twoSpaces == 2){
+            convertedText += '<br><br>'       
+            convertedText += initialText[i] 
+            twoSpaces = 0
         }
-    }
+ }
     document.getElementById('outputText').innerHTML = convertedText
 
-    // Shows font buttons on search
+    // Shows font size buttons on search
     let showFontBtnIncrease = document.getElementById('fontBtnIncrease')
     showFontBtnIncrease.style.visibility = "visible"
     let showFontBtnDecrease = document.getElementById('fontBtnDecrease')
     showFontBtnDecrease.style.visibility = "visible"
     let showFontText = document.getElementById('fontSizeP')
     showFontText.style.visibility = "visible"
+
+    // Shows font weight buttons on search
+    let showFontWIncrease = document.getElementById('fontWIncrease')
+    showFontWIncrease.style.visibility = "visible"
+    let showFontWDecrease = document.getElementById('fontWDecrease')
+    showFontWDecrease.style.visibility = "visible"
+    let showWeightText = document.getElementById('fontWeightP')
+    showWeightText.style.visibility = "visible"
+
+    // Shows background color on search
+    let showBackgroundColor = document.getElementById('backgroundColor')
+    showBackgroundColor.style.visibility ="visible"
+    let showDarkMode = document.getElementById('darkMode')
+    showDarkMode.style.visibility = "visible"
+    let showLightMode = document.getElementById('lightMode')
+    showLightMode.style.visibility = "visible"
+    let showReaderMode = document.getElementById('readerMode')
+    showReaderMode.style.visibility = "visible"
+
+    // Shows Border Top of Text on search
+    let showBorderTop = document.getElementById('outputText')
+    showBorderTop.style.visibility = 'visible'
 }
 
 
 
-// Clears the text field and input field
+// Clears the text field, input field, size button and weight button
 function clearConverter() {
     // clears the text field
     let convertedText = document.getElementById('inputField').value;
@@ -45,35 +79,176 @@ function clearConverter() {
     // clears the input field
     document.getElementById('inputField').value = ''
 
-    // hides font buttons on clear
+    // hides font size buttons on clear
     let hideFontBtnIncrease = document.getElementById('fontBtnIncrease')
     hideFontBtnIncrease.style.visibility = "hidden"
     let hideFontBtnDecrease = document.getElementById('fontBtnDecrease')
     hideFontBtnDecrease.style.visibility = "hidden"
     let hideFontText = document.getElementById('fontSizeP')
     hideFontText.style.visibility = "hidden"
+
+    // hides font weight buttons on clear
+    let showFontWIncrease = document.getElementById('fontWIncrease')
+    showFontWIncrease.style.visibility = "hidden"
+    let showFontWDecrease = document.getElementById('fontWDecrease')
+    showFontWDecrease.style.visibility = "hidden"
+    let showWeightText = document.getElementById('fontWeightP')
+    showWeightText.style.visibility = "hidden"
+
+    let showBackgroundColor = document.getElementById('backgroundColor')
+    showBackgroundColor.style.visibility ="hidden"
+    let showDarkMode = document.getElementById('darkMode')
+    showDarkMode.style.visibility = "hidden"
+    let showLightMode = document.getElementById('lightMode')
+    showLightMode.style.visibility = "hidden"
+    let showReaderMode = document.getElementById('readerMode')
+    showReaderMode.style.visibility = "hidden"
+
+
+    // Hides Border Top of Text on search
+    let showBorderTop = document.getElementById('outputText')
+    showBorderTop.style.visibility = 'hidden'
 }
 
-let counter = 0
+// Adjust font size 
+let fontSize = 20
+let lineHeight = 35
 function increaseSize() {
-    if (counter === 0){
-        document.getElementById("outputText").style.fontSize = "larger";
-        counter += 1
-    } else if (counter === 1) { 
-        document.getElementById("outputText").style.fontSize = "xx-large";
-        counter = 0
-        }
+    document.getElementById("outputText").style.fontSize = `${fontSize + 5}px`;
+    document.getElementById("outputText").style.lineHeight = `${lineHeight + 5}px`;
+    fontSize += 5
+    lineHeight += 5
 }
 
 function decreaseSize() {
-    if (counter === 0){
-        document.getElementById("outputText").style.fontSize = "small";
-        counter += 1
-        console.log(document.getElementById("outputText").style.fontSize)
-    } else if (counter === 1){ 
-        document.getElementById("outputText").style.fontSize = "x-small";
-        counter = 0
-        console.log(document.getElementById("outputText").style.fontSize)
-     }
+
+    document.getElementById("outputText").style.fontSize = `${fontSize - 5}px`;
+    document.getElementById("outputText").style.lineHeight = `${lineHeight - 5}px`;
+    fontSize -= 5
+    lineHeight -= 5
 }
 
+// Adjust font weight 
+let fontW = 400
+function increaseWeight() {
+    // there is no font for 500, so it skips this math and the user doesnt know
+    if (fontW == 400) {
+        fontW = 500
+        console.log(fontW)
+    }
+    // If the user is at the max available font weight, it keeps the math at 800
+    else if (fontW == 800) {
+        fontW -= 100 
+    }
+    document.getElementById("outputText").style.fontWeight = `${fontW + 100}`;
+    fontW += 100
+}
+
+function decreaseWeight() {
+    // there is no font for 500, so it skips this math and the user doesnt know
+    if (fontW == 600) {
+        fontW = 500
+    }
+    // If the user is at the max available font weight, it keeps the math at 200
+    else if (fontW == 200) {
+        fontW += 100 
+    }
+
+    document.getElementById("outputText").style.fontWeight = `${fontW - 100}`;
+    fontW -= 100
+}
+
+
+function darkMode(){
+    document.body.style.background = '#212121';
+
+    // Changes all P tages to white
+    document.querySelectorAll('p').forEach(e => e.style.color = "white");
+
+    // Changes font awsome icons and background to black or white
+    document.querySelectorAll('button').forEach(e => e.style.color = "white");
+    document.getElementById("fontBtnIncrease").style.background = '#212121';
+    document.getElementById("fontBtnDecrease").style.background = '#212121';
+    document.getElementById("fontSizeP").style.background = '#212121';
+    document.getElementById("fontWIncrease").style.background = '#212121';
+    document.getElementById("fontWDecrease").style.background = '#212121';
+    document.getElementById("fontWeightP").style.background = '#212121';
+
+    // Changes font awsome labels white
+    document.getElementById("fontSizeP").style.color = 'white'
+    document.getElementById("fontWeightP").style.color = 'white'
+    document.getElementById("backgroundColor").style.color = 'white';
+
+    // Changes font awesome labels backgrounds to black
+    document.getElementById("backgroundColor").style.background = '#212121';
+    document.getElementById("lightMode").style.background = '#212121';
+    document.getElementById("readerMode").style.background = '#1287a8';
+
+    // Changes main header to black    
+    document.querySelectorAll('h1').forEach(e => e.style.color = "white");   
+    
+}
+
+
+function lightMode(){
+    document.body.style.background = 'white';
+    // Changes all P tages to near balck
+    document.querySelectorAll('p').forEach(e => e.style.color = 'rgb(33, 33, 33)');
+
+    // Changes font awsome icons to black or background to white
+    document.getElementById("fontWIncrease").style.color = 'rgb(33, 33, 33)';
+    document.getElementById("fontWDecrease").style.color = 'rgb(33, 33, 33)';
+    document.getElementById("fontBtnIncrease").style.color = 'rgb(33, 33, 33)';
+    document.getElementById("fontBtnDecrease").style.color = 'rgb(33, 33, 33)';
+    document.getElementById("fontBtnIncrease").style.background = 'white';
+    document.getElementById("fontBtnDecrease").style.background = 'white';
+    document.getElementById("fontWIncrease").style.background = 'white';
+    document.getElementById("fontWDecrease").style.background = 'white';
+
+
+    // Changes main header to black
+    document.querySelectorAll('h1').forEach(e => e.style.color = "rgb(33, 33, 33)");   
+
+    // Changes font awesome labels to white
+    document.getElementById("fontSizeP").style.color = 'rgb(33, 33, 33)'
+    document.getElementById("fontWeightP").style.color = 'rgb(33, 33, 33)'
+    
+    // Changes font awesome labels backgrounds to white
+    document.getElementById("fontSizeP").style.background = 'white';
+    document.getElementById("fontWeightP").style.background = 'white';
+    document.getElementById("backgroundColor").style.color = 'rgb(33, 33, 33)';
+    document.getElementById("backgroundColor").style.background = 'white';
+
+}
+
+function readerMode(){
+    // Changes background to reader color
+    document.body.style.background = 'rgb(243,239,224)';
+    // Changes all P tages to near balck
+    document.querySelectorAll('p').forEach(e => e.style.color = 'rgb(33, 33, 33)');  
+
+    // Changes font awsome icons to black and fa background to reader
+    document.getElementById("fontWIncrease").style.color = 'rgb(33, 33, 33)';
+    document.getElementById("fontWDecrease").style.color = 'rgb(33, 33, 33)';
+    document.getElementById("fontBtnIncrease").style.color = 'rgb(33, 33, 33)';
+    document.getElementById("fontBtnDecrease").style.color = 'rgb(33, 33, 33)';
+    document.getElementById("fontBtnIncrease").style.background = 'rgb(243,239,224)';
+    document.getElementById("fontBtnDecrease").style.background = 'rgb(243,239,224)';
+    document.getElementById("fontSizeP").style.background = 'rgb(243,239,224)';
+    document.getElementById("fontWIncrease").style.background = 'rgb(243,239,224)';
+    document.getElementById("fontWDecrease").style.background = 'rgb(243,239,224)';
+    document.getElementById("fontWeightP").style.background = 'rgb(243,239,224)';
+    document.getElementById("backgroundColor").style.background = 'rgb(243,239,224)';
+    document.getElementById("darkMode").style.background = 'rgb(243,239,224)';
+    document.getElementById("lightMode").style.background = 'rgb(243,239,224)';
+    document.getElementById("readerMode").style.background = 'rgb(243,239,224)';
+    
+    // Changes font awesome labels to black
+    document.getElementById("fontWeightP").style.color = 'rgb(33, 33, 33)'
+    document.getElementById("fontSizeP").style.color = 'rgb(33, 33, 33)'
+    document.getElementById("backgroundColor").style.color = 'rgb(33, 33, 33)';
+    
+    // Changes main header to black
+    document.querySelectorAll('h1').forEach(e => e.style.color = "rgb(33, 33, 33)");   
+    
+}

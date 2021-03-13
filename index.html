@@ -6,23 +6,41 @@
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
   <link rel="stylesheet" href="style.css">
-  <title>Form Validator</title>
+  <title>Dyslexia Assistant</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+<div id="all">
     <h1>Dyslexia Assistant</h1>
     <input type="text" class="inputField" id="inputField" placeholder="Paste Here" >
 
-    <button onclick="dyslexiaConverter()">Convert it</button>
-    <button onclick="clearConverter()">Clear Text</button>
+    <button class="inputFieldBtns" onclick="dyslexiaConverter()">Convert it</button>
+    <button class="inputFieldBtns" onclick="clearConverter()">Clear Text</button>
 
-    <div class="fontControlContainer">
-        <h2 id="fontSizeP">Font Size</h2>
-        <button id="fontBtnIncrease" onclick="increaseSize()">+</button>
-        <button id="fontBtnDecrease" onclick="decreaseSize()">-</button>
+  <div class="controlPanelContainer">
+    <div>
+      <h2 id="fontSizeP">Font Size  </h2>
+      <button class="faButton" id="fontBtnIncrease" onclick="increaseSize()"><i class="fa fa-plus" aria-hidden="true"></i></button>
+      <button class="faButton" id="fontBtnDecrease" onclick="decreaseSize()"><i class="fa fa-minus" aria-hidden="true"></i></button>
     </div>
+
+    <div>
+      <h2 id="fontWeightP">Font Weight</h2>
+      <button class="faButton" id="fontWIncrease" onclick="increaseWeight()"><i class="fa fa-plus" aria-hidden="true"></i></button>
+      <button class="faButton" id="fontWDecrease" onclick="decreaseWeight()"><i class="fa fa-minus" aria-hidden="true"></i></button>
+    </div>
+
+    <div>
+      <h2 id="backgroundColor">Background Color</h2>
+      <button class="faButton" id="darkMode" onclick="darkMode()"></button>
+      <button class="faButton" id="readerMode" onclick="readerMode()"></button>
+      <button class="faButton" id="lightMode" onclick="lightMode()"></i></button>
+    </div>
+  </div>
+    
     <p id="outputText"></p>
-
-
+  
+</div>
   <script src="script.js"></script>
 </body>
 </html>
