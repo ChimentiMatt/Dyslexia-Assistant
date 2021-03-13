@@ -18,8 +18,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap');
 .inputField {
     width: 500px;
-    border-radius: 0px 10px 10px 0px;
-    margin-left: 25px;
+
+    margin-top: 15px;
+
 }
 
 *{
@@ -42,8 +43,11 @@ h1 {
     color: rgb(33, 33, 33);
     margin-left: 20px;
     margin-top: 20px;
+    /* text-align: center; */
 }
-
+.centerContent{
+      text-align: center;  
+}
 .currentPage{
 
 }
@@ -57,7 +61,7 @@ h1 {
 .controlPanelContainer{
     margin-left: 25px;
     margin-bottom: 15px;
-
+    justify-content: center;
 }
 
 p {
@@ -73,14 +77,27 @@ a {
     margin-left: 25px;
 }
 .inputFieldBtns{
-    border: 1px solid #1287a8;
-    background-color:  #1287a8;
-    border-radius: 3px;
-    color: white;
-    margin-top: 20px;
-}
-.inputFieldBtns:hover{
     background-color:#43abc9;
+    color: white;
+    margin-bottom: 10px;
+    margin-left:  -5px;
+    border:  2px solid #43abc9;
+
+}
+
+.btn1 {
+    border-right: 2px solid #268ba7;
+}
+
+.btn2 {
+    border-radius: 0px 10px 10px 0px;
+    /* margin-left:  -5px; */
+    border:  2px solid #43abc9;
+    margin-left:  -4px;
+}
+
+.inputFieldBtns:hover{
+    background-color:rgb(53, 202, 98);
 
 }
 

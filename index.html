@@ -11,13 +11,15 @@
 </head>
 <body>
 <div id="all">
+  <div class="centerContent">
     <h1>Dyslexic Defender</h1>
     <a class="currentPage">Reading</a>
     <a class="writingUrl" href="writing.html">Writing</a>
     <br>
     <input type="text" class="inputField" id="inputField" placeholder="Paste Here" >
-    <button class="inputFieldBtns" onclick="dyslexiaConverter()">Convert Text</button>
-    <button class="inputFieldBtns" onclick="clearConverter()">Clear Text</button>
+
+    <button class="inputFieldBtns btn1" onclick="dyslexiaConverter()">Convert Text</button>
+    <button class="inputFieldBtns btn2" onclick="clearConverter()">Clear Text</button>
 
   <div class="controlPanelContainer">
     <div>
@@ -39,7 +41,7 @@
       <button class="faButton" id="lightMode" onclick="lightMode()"></i></button>
     </div>
   </div>
-    
+</div>    
   <div class="test">
     <p id="outputText"></p>
   <div>
