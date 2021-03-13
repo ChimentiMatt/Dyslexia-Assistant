@@ -5,19 +5,16 @@
   <meta charset="utf-8">
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
-  <link rel="stylesheet" href="style.css">
-  <title>Dyslexia Assistant</title>
+  <link rel="stylesheet" href="writingStyle.css">
+  <title>Dyslexia Assistant | Writing</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <div id="all">
     <h1>Dyslexic Defender</h1>
-    <a class="currentPage">Reading</a>
-    <a class="writingUrl" href="writing.html">Writing</a>
+    <a id="indexUrl" href="index.html">Reading</a>
+    <a id="currentPage">Writing</a>
     <br>
-    <input type="text" class="inputField" id="inputField" placeholder="Paste Here" >
-    <button class="inputFieldBtns" onclick="dyslexiaConverter()">Convert Text</button>
-    <button class="inputFieldBtns" onclick="clearConverter()">Clear Text</button>
 
   <div class="controlPanelContainer">
     <div>
@@ -45,7 +42,7 @@
   <div>
 </div>
 <br><br><br><br><br><br>
-  <script src="script.js"></script>
-  
+  <script src="writingScript.js">
+  </script>
 </body>
 </html>

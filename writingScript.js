@@ -5,9 +5,13 @@ let alphanumeric = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
 "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4",
 "5", "6", "7", "8", "9", "!", "@", "#", "$", "%", "^", "&", "8", "(", ")",
 "-", "=", ",", ".", ";", "'", ":", "—", "?", '\”',, '\'', '\“', '’', "<", ">" ]
- 
-// let alphanumeric = ['A', ' \" ', 's', '\”']
 
+//transforms outputText into a editible field
+window.addEventListener('load', function(){
+    document.getElementById('outputText').setAttribute('contenteditable', 'true');
+});
+
+// let alphanumeric = ['A', ' \" ', 's', '\”']
 
 function dyslexiaConverter() {
     let initialText = document.getElementById('inputField').value;
@@ -60,6 +64,7 @@ function dyslexiaConverter() {
         }
 }
 
+
 // Removes Js's commas that it puts in between items in an array
 convertedArrayParced = convertedArray.join(' ')
 
@@ -73,65 +78,20 @@ document.getElementById('outputText').innerHTML = convertedArrayParced
     let showFontText = document.getElementById('fontSizeP')
     showFontText.style.visibility = "visible"
 
-    // Shows font weight buttons on search
-    let showFontWIncrease = document.getElementById('fontWIncrease')
-    showFontWIncrease.style.visibility = "visible"
-    let showFontWDecrease = document.getElementById('fontWDecrease')
-    showFontWDecrease.style.visibility = "visible"
-    let showWeightText = document.getElementById('fontWeightP')
-    showWeightText.style.visibility = "visible"
 
-    // Shows background color on search
-    let showBackgroundColor = document.getElementById('backgroundColor')
-    showBackgroundColor.style.visibility ="visible"
-    let showDarkMode = document.getElementById('darkMode')
-    showDarkMode.style.visibility = "visible"
-    let showLightMode = document.getElementById('lightMode')
-    showLightMode.style.visibility = "visible"
-    let showReaderMode = document.getElementById('readerMode')
-    showReaderMode.style.visibility = "visible"
-
-    // Shows Border Top of Text on search
-    let showBorderTop = document.getElementById('outputText')
-    showBorderTop.style.visibility = 'visible'
 }
 
 
 
-// Clears the text field, input field, size button and weight button
+
+
+// Clears the text field, size button and weight button
 function clearConverter() {
     // clears the text field
     let convertedText = document.getElementById('inputField').value;
     convertedText = ''
     document.getElementById('outputText').innerHTML = convertedText
 
-    // clears the input field
-    document.getElementById('inputField').value = ''
-
-    // hides font size buttons on clear
-    let hideFontBtnIncrease = document.getElementById('fontBtnIncrease')
-    hideFontBtnIncrease.style.visibility = "hidden"
-    let hideFontBtnDecrease = document.getElementById('fontBtnDecrease')
-    hideFontBtnDecrease.style.visibility = "hidden"
-    let hideFontText = document.getElementById('fontSizeP')
-    hideFontText.style.visibility = "hidden"
-
-    // hides font weight buttons on clear
-    let showFontWIncrease = document.getElementById('fontWIncrease')
-    showFontWIncrease.style.visibility = "hidden"
-    let showFontWDecrease = document.getElementById('fontWDecrease')
-    showFontWDecrease.style.visibility = "hidden"
-    let showWeightText = document.getElementById('fontWeightP')
-    showWeightText.style.visibility = "hidden"
-
-    let showBackgroundColor = document.getElementById('backgroundColor')
-    showBackgroundColor.style.visibility ="hidden"
-    let showDarkMode = document.getElementById('darkMode')
-    showDarkMode.style.visibility = "hidden"
-    let showLightMode = document.getElementById('lightMode')
-    showLightMode.style.visibility = "hidden"
-    let showReaderMode = document.getElementById('readerMode')
-    showReaderMode.style.visibility = "hidden"
 
 
     // Hides Border Top of Text on search
@@ -150,7 +110,6 @@ function increaseSize() {
 }
 
 function decreaseSize() {
-
     document.getElementById("outputText").style.fontSize = `${fontSize - 5}px`;
     document.getElementById("outputText").style.lineHeight = `${lineHeight - 5}px`;
     fontSize -= 5
@@ -217,7 +176,11 @@ function darkMode(){
     document.querySelectorAll('h1').forEach(e => e.style.color = "white");   
     
     //Changes paragraph header to white
-    document.getElementById('outputText').style.borderTopColor = "white"
+    document.getElementById('outputText').style.borderColor = "white"
+
+    //Changes a tags colors 
+    document.getElementById('currentPage').style.color = "white"
+    document.getElementById('indexUrl').style.color = "white"
 }
 
 
@@ -249,6 +212,10 @@ function lightMode(){
     document.getElementById("fontWeightP").style.background = 'white';
     document.getElementById("backgroundColor").style.color = 'rgb(33, 33, 33)';
     document.getElementById("backgroundColor").style.background = 'white';
+    
+    //Changes a tags colors 
+    document.getElementById('currentPage').style.color = "rgb(33, 33, 33)"
+    document.getElementById('indexUrl').style.color =  "rgb(33, 33, 33)"
 
 }
 
@@ -281,7 +248,10 @@ function readerMode(){
     
     // Changes main header to black
     document.querySelectorAll('h1').forEach(e => e.style.color = "rgb(33, 33, 33)");   
-    
+   
+    //Changes a tags colors 
+    document.getElementById('currentPage').style.color = "rgb(33, 33, 33)"
+    document.getElementById('indexUrl').style.color =  "rgb(33, 33, 33)"
 }
 window.addEventListener('load', function(){
     document.getElementById('outputText').setAttribute('contenteditable', 'true');
