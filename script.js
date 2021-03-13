@@ -1,11 +1,14 @@
-//Makes an array of the alphabet 
+// Makes an array of the alphabet 
 let alphanumeric = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", 
 "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a",
 "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p",
 "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4",
 "5", "6", "7", "8", "9", "!", "@", "#", "$", "%", "^", "&", "8", "(", ")",
-"-", "=", ",", ".", ";", "'", ":", "—", "?" ]
+"-", "=", ",", ".", ";", "'", ":", "—", "?", '\”', '\“', "<", ">"  ]
  
+// let alphanumeric = ['A', ' \" ', 's', '\”']
+
+
 function dyslexiaConverter() {
     let initialText = document.getElementById('inputField').value;
     let convertedText = ''
@@ -20,21 +23,46 @@ function dyslexiaConverter() {
             twoSpaces = 0
         // Add a space between words while appending the letter or symbol such as "A p p l e"
         } else if (alphanumeric.includes(initialText[i]) && counterNewWord != 0 && twoSpaces != 2){
-            convertedText += ' ' + initialText[i] 
+            // convertedText += ' ' + initialText[i] 
+            convertedText += initialText[i] 
             twoSpaces = 0
         // If it is a new word at multiple spacessuch as "A p p l e     s o u r"
         } else if (initialText[i] == ' ' && twoSpaces != 2){
-            convertedText += '\xa0'+ '\xa0'+ '\xa0' + '\xa0'+ '\xa0'+ '\xa0'
+            convertedText += '\xa0'+ '\xa0'
             counterNewWord += 1
             twoSpaces += 1
         
         } else if (twoSpaces == 2){
+            // convertedText += '!!!!'
             convertedText += '<br><br>'       
             convertedText += initialText[i] 
             twoSpaces = 0
         }
- }
-    document.getElementById('outputText').innerHTML = convertedText
+    }
+    let convertedArray = []
+    let word = ""
+    let counter = 0
+    for (let c in convertedText){
+        counter += 1
+        if (alphanumeric.includes(convertedText[c]) && convertedText[c] != '\xa0' && counter < convertedText.length ){
+            // console.log(convertedText)
+            word += convertedText[c]
+
+        }else if (convertedText[c] == '\xa0' && counter -1< convertedText.length ){
+            convertedArray.push(word)
+            word = ''
+            console.log(word)
+        } else if ( counter == convertedText.length ){
+            word += convertedText[c]
+            convertedArray.push(word)
+            // console.log(word, 'word')
+            console.log(convertedArray, 'test')
+        }
+}
+
+ready = convertedArray.join(' ')
+
+document.getElementById('outputText').innerHTML = ready
 
     // Shows font size buttons on search
     let showFontBtnIncrease = document.getElementById('fontBtnIncrease')

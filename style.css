@@ -88,12 +88,22 @@ h2 {
     margin-top: 6px;
 
 }
+.test{
+    word-wrap: normal;
+
+    /* width: 900px; */
+}
+
 
 #outputText {
     visibility: hidden;
     border-top: 1px solid rgb(33, 33, 33);
     padding-top: 15px;
+    letter-spacing: 10px;
+    white-space: pre-wrap
 }
+
+
 .controlPanelContainer {
     display: flex;
     flex-direction: row;
