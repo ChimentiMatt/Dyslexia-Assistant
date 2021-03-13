@@ -60,9 +60,10 @@ function dyslexiaConverter() {
         }
 }
 
-ready = convertedArray.join(' ')
+// Removes Js's commas that it puts in between items in an array
+convertedArrayParced = convertedArray.join(' ')
 
-document.getElementById('outputText').innerHTML = ready
+document.getElementById('outputText').innerHTML = convertedArrayParced
 
     // Shows font size buttons on search
     let showFontBtnIncrease = document.getElementById('fontBtnIncrease')
@@ -215,6 +216,8 @@ function darkMode(){
     // Changes main header to black    
     document.querySelectorAll('h1').forEach(e => e.style.color = "white");   
     
+    //Changes paragraph header to white
+    document.getElementById('outputText').style.borderTopColor = "white"
 }
 
 
