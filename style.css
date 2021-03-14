@@ -19,7 +19,7 @@
 .inputField {
     width: 500px;
 
-    margin-top: 15px;
+    margin-top: 20px;
 
 }
 
@@ -35,7 +35,11 @@
 
 }
 
-
+.logoFirstWord{
+    letter-spacing: 10px;
+    font-weight: normal;
+    font-size: 40px;
+}
 h1 {
     font-weight: normal;
     font-size: 40px;
@@ -44,12 +48,13 @@ h1 {
     margin-left: 20px;
     margin-top: 20px;
     /* text-align: center; */
+
 }
 .centerContent{
       text-align: center;  
 }
 .currentPage{
-
+    
 }
 
 .writingUrl {
@@ -74,32 +79,49 @@ p {
 }
 
 a {
-    margin-left: 25px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 .inputFieldBtns{
-    background-color:#43abc9;
+    background-color: #268ba7;
     color: white;
     margin-bottom: 10px;
-    margin-left:  -5px;
-    border:  2px solid #43abc9;
+    /* margin-left:  -4px; */
+    border:  2px solid #268ba7;
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* Firefox 4+, Opera, Chrome */
 
 }
-
+/* #268ba7;
+#43abc9; */
 .btn1 {
-    border-right: 2px solid #268ba7;
+    border-right: 2px solid #43abc9;
+    border-radius: 0px 0px 0px 10px;
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* Firefox 4+, Opera, Chrome */
+    width: 100px;
 }
 
 .btn2 {
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 0px 0px 10px 0px;
     /* margin-left:  -5px; */
-    border:  2px solid #43abc9;
-    margin-left:  -4px;
+    border:  2px solid #268ba7;
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* Firefox 4+, Opera, Chrome */
+
+    width: 100px;
 }
 
 .inputFieldBtns:hover{
-    background-color:rgb(53, 202, 98);
+    background-color:#43abc9;
+    border:  2px solid #43abc9;
 
 }
+.btn2:hover {
+
+    border-right: 2px solid #268ba7;
+}
+
 
 /* Font awesome buttons */
 button {
