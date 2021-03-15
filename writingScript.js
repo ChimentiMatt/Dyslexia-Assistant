@@ -30,9 +30,9 @@ function dyslexiaConverter() {
             // convertedText += ' ' + initialText[i] 
             convertedText += initialText[i] 
             twoSpaces = 0
-        // If it is a new word at multiple spacessuch as "A p p l e     s o u r"
+        // If it is a new word at multiple spaces such as "A p p l e     s o u r"
         } else if (initialText[i] == ' ' && twoSpaces != 2){
-            convertedText += '\xa0'+ '\xa0'
+            convertedText += '\xa0'+ '\xa0'+ '\xa0'+ '\xa0'+ '\xa0'
             counterNewWord += 1
             twoSpaces += 1
         
@@ -122,10 +122,21 @@ function increaseSize() {
     document.getElementById("outputText").style.lineHeight = `${lineHeight + 1}px`;
     fontSize += 1
     lineHeight += 1
-    console.log(fontSize,"fontSize")
+    // console.log(fontSize,"fontSize")
+
+    //Appends the new value to the drop down
+    let selections = document.getElementById('sizeDropDown');
+    var option = document.createElement('option');
+    option.value = fontSize;
+    option.text = fontSize;
+    selections.appendChild(option)
+
+    // selections = document.getElementById('sizeDropDown');
+    // selections.options[fontSize].selected = true; 
+    // console.log(option.text)
 }
 
-
+// Adjust font size - button
 function decreaseSize() {
     document.getElementById("outputText").style.fontSize = `${fontSize - 1}px`;
     document.getElementById("outputText").style.lineHeight = `${lineHeight - 1}px`;

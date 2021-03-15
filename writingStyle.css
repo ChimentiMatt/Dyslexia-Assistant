@@ -69,9 +69,11 @@ h1 {
 
 
 .controlPannelContainer{
+    display: flex;
+    flex-direction: row;
     margin-top: 15px;
     margin-left: 10vw;
-    /* margin-bottom: 15px; */
+    margin-bottom: 5px;
 }
 
 p {
@@ -127,7 +129,7 @@ h2 {
     background-color: white;
     padding-top: 15px;
     letter-spacing: 10px;
-    white-space: pre-wrap;
+    /* white-space: pre-wrap; */
     /* border: 1px solid rgb(33, 33, 33); */
     /* background-color: white; */
     min-height: 100vh;
@@ -135,10 +137,11 @@ h2 {
     border: 2px solid rgba(133, 133, 133, .1);
     /* box-shadow: 15px 15px 15px 15px black; */
     font-size: 12px;
+    white-space: normal;
 }
 
 
-.controlPanelContainer {
+.controlPannelContainer {
     display: flex;
     flex-direction: row;
     margin-bottom: 5px;
@@ -153,20 +156,33 @@ h2 {
 /* Buttons to change font size */
 #fontBtnIncrease {
     background: rgb(250, 250, 250);
-    padding-left: 8px ;
-    padding-right: 12px ;
+    height: 30px;
+    padding: 0 8px  0;
+    border-radius:  5px 0 0 5px;
 }
 
 #sizeDropDown{
     background: rgb(250, 250, 250);
     margin-left: -5px;  
+    align-items: center;
     text-align: center;
+    height: 30px;
+    -webkit-appearance: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#sizeDropDown option {
+    align-items: center;
+
 }
 
 #fontBtnDecrease {
     background: rgb(250, 250, 250);
     margin-left: -5px;
-    /* margin-right: 15px; */
+    margin-right: 15px;
+    height: 30px;
+    border-radius: 0 5px 5px 0;
 }
 
 #fontSizeP{
@@ -179,15 +195,19 @@ h2 {
     padding: 0;
     background: rgb(250, 250, 250);
     padding: 0 8px  0;
+    height: 30px;
+    border-radius:  5px 0 0 5px;
 }
 #fontWDecrease {
     background: rgb(250, 250, 250);
     margin-left: -5px;
-
+    height: 30px;
+    border-radius: 0 5px 5px 0;
 }
 #fontWeight{
     margin-left: -5px;
     background: rgb(250, 250, 250);
+    height: 30px;
 }
 
 /* #fontWeightP{
