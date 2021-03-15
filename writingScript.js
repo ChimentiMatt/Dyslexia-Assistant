@@ -99,21 +99,39 @@ function clearConverter() {
     showBorderTop.style.visibility = 'hidden'
 }
 
-// Adjust font size 
-let fontSize = 20
-let lineHeight = 35
+
+// Adjust font size Drop Down
+let sizeDropDown = document.getElementById("sizeDropDown")
+let fontSize = 12
+let lineHeight = 27
+sizeDropDown.onchange = function () {
+    document.getElementById("outputText").style.fontSize = `${this.value}px`;
+    document.getElementById("outputText").style.lineHeight = `${this.value}px`;
+    let fontSizeDifference = this.value - fontSize
+    console.log(fontSizeDifference)
+    fontSize += fontSizeDifference
+
+    let lineHeightDifference = this.value - lineHeight
+    console.log(fontSizeDifference)
+    lineHeight += lineHeightDifference
+    console.log(fontSize,"fontSize")
+}
+// Adjust font size + button
 function increaseSize() {
-    document.getElementById("outputText").style.fontSize = `${fontSize + 5}px`;
-    document.getElementById("outputText").style.lineHeight = `${lineHeight + 5}px`;
-    fontSize += 5
-    lineHeight += 5
+    document.getElementById("outputText").style.fontSize = `${fontSize + 1}px`;
+    document.getElementById("outputText").style.lineHeight = `${lineHeight + 1}px`;
+    fontSize += 1
+    lineHeight += 1
+    console.log(fontSize,"fontSize")
 }
 
+
 function decreaseSize() {
-    document.getElementById("outputText").style.fontSize = `${fontSize - 5}px`;
-    document.getElementById("outputText").style.lineHeight = `${lineHeight - 5}px`;
-    fontSize -= 5
-    lineHeight -= 5
+    document.getElementById("outputText").style.fontSize = `${fontSize - 1}px`;
+    document.getElementById("outputText").style.lineHeight = `${lineHeight - 1}px`;
+    fontSize -= 1
+    lineHeight -= 1
+    console.log(fontSize,"fontSize")
 }
 
 // Adjust font weight 
@@ -177,6 +195,7 @@ function darkMode(){
     
     //Changes paragraph header to white
     document.getElementById('outputText').style.borderColor = "white"
+    document.getElementById('outputText').style.color = "black"
 
     //Changes a tags colors 
     document.getElementById('currentPage').style.color = "white"
@@ -185,7 +204,7 @@ function darkMode(){
 
 
 function lightMode(){
-    document.body.style.background = 'white';
+    document.body.style.background = 'rgb(250, 250, 250)';
     // Changes all P tages to near balck
     document.querySelectorAll('p').forEach(e => e.style.color = 'rgb(33, 33, 33)');
 
@@ -194,31 +213,31 @@ function lightMode(){
     document.getElementById("fontWDecrease").style.color = 'rgb(33, 33, 33)';
     document.getElementById("fontBtnIncrease").style.color = 'rgb(33, 33, 33)';
     document.getElementById("fontBtnDecrease").style.color = 'rgb(33, 33, 33)';
-    document.getElementById("fontBtnIncrease").style.background = 'white';
-    document.getElementById("fontBtnDecrease").style.background = 'white';
-    document.getElementById("fontWIncrease").style.background = 'white';
-    document.getElementById("fontWDecrease").style.background = 'white';
+    document.getElementById("fontBtnIncrease").style.background = 'rgb(250, 250, 250)';
+    document.getElementById("fontBtnDecrease").style.background = 'rgb(250, 250, 250)';
+    document.getElementById("fontWIncrease").style.background = 'rgb(250, 250, 250)';
+    document.getElementById("fontWDecrease").style.background = 'rgb(250, 250, 250)';
 
 
     // Changes main header to black
-    document.querySelectorAll('h1').forEach(e => e.style.color = "rgb(33, 33, 33)");   
+    document.querySelectorAll('h1').forEach(e => e.style.color = 'rgb(33, 33, 33)');   
 
-    // Changes font awesome labels to white
+    // Changes font awesome labels
     document.getElementById("fontSizeP").style.color = 'rgb(33, 33, 33)'
     document.getElementById("fontWeightP").style.color = 'rgb(33, 33, 33)'
-    
-    // Changes font awesome labels backgrounds to white
-    document.getElementById("fontSizeP").style.background = 'white';
-    document.getElementById("fontWeightP").style.background = 'white';
     document.getElementById("backgroundColor").style.color = 'rgb(33, 33, 33)';
-    document.getElementById("backgroundColor").style.background = 'white';
+    
+    // Changes font awesome labels backgrounds
+    document.getElementById("fontSizeP").style.background = 'rgb(250, 250, 250)';
+    document.getElementById("fontWeightP").style.background = 'rgb(250, 250, 250)';
+    document.getElementById("backgroundColor").style.background = 'rgb(250, 250, 250)';
     
     //Changes a tags colors 
     document.getElementById('currentPage').style.color = "rgb(33, 33, 33)"
     document.getElementById('indexUrl').style.color =  "rgb(33, 33, 33)"
 
 }
-
+//rgb(243,239,224);
 function readerMode(){
     // Changes background to reader color
     document.body.style.background = 'rgb(243,239,224)';

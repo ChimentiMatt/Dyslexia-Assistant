@@ -218,6 +218,10 @@ function darkMode(){
     
     //Changes paragraph header to white
     document.getElementById('outputText').style.borderTopColor = "white"
+
+    //Changes a tags colors 
+    document.getElementById('currentPage').style.color = "white"
+    document.getElementById('writingUrl').style.color = "white"
 }
 
 
@@ -250,6 +254,9 @@ function lightMode(){
     document.getElementById("backgroundColor").style.color = 'rgb(33, 33, 33)';
     document.getElementById("backgroundColor").style.background = 'white';
 
+    //Changes a tags colors 
+    document.getElementById('currentPage').style.color = "black"
+    document.getElementById('writingUrl').style.color = "black"
 }
 
 function readerMode(){
@@ -281,7 +288,10 @@ function readerMode(){
     
     // Changes main header to black
     document.querySelectorAll('h1').forEach(e => e.style.color = "rgb(33, 33, 33)");   
-    
+
+    //Changes a tags colors 
+    document.getElementById('currentPage').style.color = "black"
+    document.getElementById('writingUrl').style.color = "black"
 }
 window.addEventListener('load', function(){
     document.getElementById('outputText').setAttribute('contenteditable', 'true');

@@ -34,8 +34,12 @@
 #all{
 
 }
+.logo{
+    height: 40px;
+    margin-top: -50;
+}
 
-.logoFirstWord{
+.logo{
     letter-spacing: 10px;
     font-weight: normal;
     font-size: 40px;
@@ -45,19 +49,20 @@ h1 {
     font-size: 40px;
     /* color: #008CBA; */
     color: rgb(33, 33, 33);
-    margin-left: 20px;
+
     margin-top: 20px;
     /* text-align: center; */
-
 }
+
 .centerContent{
       text-align: center;  
 }
-.currentPage{
-    
+
+#currentPage{
+
 }
 
-.writingUrl {
+#writingUrl {
     text-decoration: none;
     color: black;
     opacity: .5;
@@ -83,11 +88,12 @@ a {
   padding-left: 10px;
 }
 .inputFieldBtns{
-    background-color: #268ba7;
-    color: white;
-    margin-bottom: 10px;
+    background-color: #7ED95F;
+    color: rgba(0, 0, 0, 0.5);
+
+
     /* margin-left:  -4px; */
-    border:  2px solid #268ba7;
+    border:  2px solid #7ED95F;
     -webkit-background-clip: padding-box; /* for Safari */
     background-clip: padding-box; /* Firefox 4+, Opera, Chrome */
 
@@ -95,7 +101,7 @@ a {
 /* #268ba7;
 #43abc9; */
 .btn1 {
-    border-right: 2px solid #43abc9;
+    border-right: 2px solid #7ED95F;
     border-radius: 0px 0px 0px 10px;
     -webkit-background-clip: padding-box; /* for Safari */
     background-clip: padding-box; /* Firefox 4+, Opera, Chrome */
@@ -105,7 +111,7 @@ a {
 .btn2 {
     border-radius: 0px 0px 10px 0px;
     /* margin-left:  -5px; */
-    border:  2px solid #268ba7;
+    border:  2px solid #7ED95F;
     -webkit-background-clip: padding-box; /* for Safari */
     background-clip: padding-box; /* Firefox 4+, Opera, Chrome */
 
@@ -126,7 +132,7 @@ a {
 /* Font awesome buttons */
 button {
     border: none;
-    color:  rgb(33, 33, 33)
+    color:  #7ED95F;
 }
 
 .faButton{

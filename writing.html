@@ -11,30 +11,51 @@
 </head>
 <body>
 <div id="all">
-    <h1>Dyslexic Defender</h1>
+  <div class="centerContent">
+    <h1><span class="logo" >Prolexic</span> </h1>
     <a id="indexUrl" href="index.html">Reading</a>
     <a id="currentPage">Writing</a>
     <br>
+  </div>
+  <div class="controlPannelContainer">
 
-  <div class="controlPanelContainer">
-    <div>
-      <h2 id="fontSizeP">Font Size  </h2>
+      <!-- <h2 id="fontSizeP">Font Size  </h2> -->
+    <div class="controlPannel">
       <button class="faButton" id="fontBtnIncrease" onclick="increaseSize()"><i class="fa fa-plus" aria-hidden="true"></i></button>
+      <select  class="faButton" id="sizeDropDown">
+        <option value = "8">8</option>
+        <option value = "9">9</option>
+        <option value = "10">10</option>
+        <option value = "11">11</option>
+        <option value = "12" >12</option>
+        <option value = "14">14</option>
+        <option value = "18">18</option>
+        <option value = "18">18</option>        
+        <option value = "24">24</option>        
+        <option value = "30">30</option>  
+        <option value = "36">36</option>  
+        <option value = "48">48</option>  
+        <option value = "60">60</option>  
+        <option value = "72">72</option>  
+        <option value = "96">96</option>          
+      </select>
       <button class="faButton" id="fontBtnDecrease" onclick="decreaseSize()"><i class="fa fa-minus" aria-hidden="true"></i></button>
     </div>
 
     <div>
-      <h2 id="fontWeightP">Font Weight</h2>
+      <!-- <h2 id="fontWeightP">Font Weight</h2> -->
       <button class="faButton" id="fontWIncrease" onclick="increaseWeight()"><i class="fa fa-plus" aria-hidden="true"></i></button>
+      <button class="faButton" id="fontWeight">Width</button>
       <button class="faButton" id="fontWDecrease" onclick="decreaseWeight()"><i class="fa fa-minus" aria-hidden="true"></i></button>
     </div>
 
-    <div>
-      <h2 id="backgroundColor">Background Color</h2>
+    <!-- <h2 id="backgroundColor">Background Color</h2> -->
+    <!-- <div>
       <button class="faButton" id="darkMode" onclick="darkMode()"></button>
       <button class="faButton" id="readerMode" onclick="readerMode()"></button>
       <button class="faButton" id="lightMode" onclick="lightMode()"></i></button>
-    </div>
+    </div> -->
+
   </div>
     
   <div class="test">
