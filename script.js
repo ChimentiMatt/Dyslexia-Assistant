@@ -60,30 +60,30 @@ function dyslexiaConverter() {
         }
 }
 
-// Removes Js's commas that it puts in between items in an array
-convertedArrayParced = convertedArray.join(' ')
+    // Removes Js's commas that it puts in between items in an array
+    convertedArrayParced = convertedArray.join(' ')
 
-document.getElementById('outputText').innerHTML = convertedArrayParced
+    document.getElementById('outputText').innerHTML = convertedArrayParced
 
     // Shows font size buttons on search
     let showFontBtnIncrease = document.getElementById('fontBtnIncrease')
     showFontBtnIncrease.style.visibility = "visible"
     let showFontBtnDecrease = document.getElementById('fontBtnDecrease')
     showFontBtnDecrease.style.visibility = "visible"
-    let showFontText = document.getElementById('fontSizeP')
-    showFontText.style.visibility = "visible"
+
 
     // Shows font weight buttons on search
     let showFontWIncrease = document.getElementById('fontWIncrease')
     showFontWIncrease.style.visibility = "visible"
+    let showFontWeight = document.getElementById('fontWeight')
+    showFontWeight.style.visibility = "visible"
     let showFontWDecrease = document.getElementById('fontWDecrease')
     showFontWDecrease.style.visibility = "visible"
-    let showWeightText = document.getElementById('fontWeightP')
-    showWeightText.style.visibility = "visible"
 
-    // Shows background color on search
-    let showBackgroundColor = document.getElementById('backgroundColor')
-    showBackgroundColor.style.visibility ="visible"
+
+    // Shows background color on search and its border
+    let showBackgroundModes = document.getElementById('backgroundModes')
+    showBackgroundModes.style.visibility = "visible"
     let showDarkMode = document.getElementById('darkMode')
     showDarkMode.style.visibility = "visible"
     let showLightMode = document.getElementById('lightMode')
@@ -113,19 +113,18 @@ function clearConverter() {
     hideFontBtnIncrease.style.visibility = "hidden"
     let hideFontBtnDecrease = document.getElementById('fontBtnDecrease')
     hideFontBtnDecrease.style.visibility = "hidden"
-    let hideFontText = document.getElementById('fontSizeP')
-    hideFontText.style.visibility = "hidden"
 
     // hides font weight buttons on clear
     let showFontWIncrease = document.getElementById('fontWIncrease')
     showFontWIncrease.style.visibility = "hidden"
     let showFontWDecrease = document.getElementById('fontWDecrease')
     showFontWDecrease.style.visibility = "hidden"
-    let showWeightText = document.getElementById('fontWeightP')
-    showWeightText.style.visibility = "hidden"
+    let showFontWeight = document.getElementById('fontWeight')
+    showFontWeight.style.visibility = "hidden"
 
-    let showBackgroundColor = document.getElementById('backgroundColor')
-    showBackgroundColor.style.visibility ="hidden"
+    // Hides background color on search and its border
+    let showBackgroundModes = document.getElementById('backgroundModes')
+    showBackgroundModes.style.visibility = "hidden"
     let showDarkMode = document.getElementById('darkMode')
     showDarkMode.style.visibility = "hidden"
     let showLightMode = document.getElementById('lightMode')
@@ -293,6 +292,3 @@ function readerMode(){
     document.getElementById('currentPage').style.color = "black"
     document.getElementById('writingUrl').style.color = "black"
 }
-window.addEventListener('load', function(){
-    document.getElementById('outputText').setAttribute('contenteditable', 'true');
-});

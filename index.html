@@ -12,12 +12,19 @@
 
 <body>
 <!-- Facilislexic  -->
+
+<!-- goutdy old style -->
+
+
+
 <div id="all">
 
   <div class="centerContent">
-    <h1><span class="logo" >pro-lexia</span> </h1>
-    <a id="currentPage">Reading</a>
-    <a id="writingUrl" href="writing.html">Writing</a>
+    <h1><span class="logo">Dyslexic Defender</span> </h1>
+    <div class="aTagContainer">
+      <a id="currentPage">Reading</a>
+      <a id="writingUrl" href="writing.html">Writing</a>
+    </div>
     <br>
     <input type="text" class="inputField" id="inputField" placeholder="Paste Here" >
   <br>
@@ -26,22 +33,21 @@
 
   <div class="controlPanelContainer">
     <div>
-      <h2 id="fontSizeP">Font Size  </h2>
+
       <button class="faButton" id="fontBtnIncrease" onclick="increaseSize()"><i class="fa fa-plus" aria-hidden="true"></i></button>
       <button class="faButton" id="fontBtnDecrease" onclick="decreaseSize()"><i class="fa fa-minus" aria-hidden="true"></i></button>
     </div>
 
     <div>
-      <h2 id="fontWeightP">Font Weight</h2>
       <button class="faButton" id="fontWIncrease" onclick="increaseWeight()"><i class="fa fa-plus" aria-hidden="true"></i></button>
+      <button class="faButton" id="fontWeight">Width</button>
       <button class="faButton" id="fontWDecrease" onclick="decreaseWeight()"><i class="fa fa-minus" aria-hidden="true"></i></button>
     </div>
 
-    <div>
-      <h2 id="backgroundColor">Background Color</h2>
-      <button class="faButton" id="darkMode" onclick="darkMode()"></button>
-      <button class="faButton" id="readerMode" onclick="readerMode()"></button>
-      <button class="faButton" id="lightMode" onclick="lightMode()"></i></button>
+    <div id="backgroundModes">
+      <button id="darkMode" onclick="darkMode()"></button>
+      <button id="readerMode" onclick="readerMode()"></button>
+      <button id="lightMode" onclick="lightMode()"></i></button>
     </div>
   </div>
 </div>    

@@ -33,22 +33,33 @@ body {
 #all{
 
 }
+
+
 .logo{
+    /* letter-spacing: 10px;
+    margin-left: -10px; */
+    font-weight: normal;
+    font-size: 40px;
     height: 40px;
     margin-top: -50;
 }
-
-.logo{
-    letter-spacing: 10px;
-    font-weight: normal;
-    font-size: 40px;
+.centerContent{
+    text-align: center;  
 }
+
+.aTagContainer{
+    display: flex;
+    margin: 0 auto ;
+    justify-content: space-between;
+    width: 150px;
+}
+
 h1 {
     font-weight: normal;
     font-size: 40px;
     /* color: #008CBA; */
     color: rgb(33, 33, 33);
-    margin-left: 20px;
+
     margin-top: 20px;
     /* text-align: center; */
 }
@@ -85,9 +96,7 @@ p {
     /* font-weight: 100; */
 }
 
-a {
-    margin-left: 25px;
-}
+
 .inputFieldBtns{
     border: 1px solid #1287a8;
     background-color:  #1287a8;
@@ -136,7 +145,7 @@ h2 {
     padding-left: 15px;
     border: 2px solid rgba(133, 133, 133, .1);
     /* box-shadow: 15px 15px 15px 15px black; */
-    font-size: 12px;
+    font-size: 16px;
     white-space: normal;
 }
 

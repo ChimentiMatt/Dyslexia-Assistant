@@ -1,0 +1,59 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow:hidden;  
+}
+
+.aboutHeader{
+    margin-top: 75px;
+    text-align: center;
+    font-size: 30px;
+}
+.aboutHeader p{
+    padding-top: 20px;
+    text-align: center;
+    
+}
+
+.howItWorks{
+    margin-top: 80px;
+    margin-left: 5vw;
+}
+.howItWorks p {
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+
+
+
+
+.example{
+    letter-spacing: 10px;
+}
+
+.colorContainer{
+    background-color: #43abc9;
+    margin-top: 150px;
+    height: 500px;
+    width:100%;
+    margin-left:-100px;
+    padding-left: 100px;
+    margin-right:-100px;
+    padding-right: 100px;
+    left:-25%;
+    transform:rotate(-2deg);
+}
+
+.testingBody{
+    padding-top: 100px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    transform:rotate(+2deg);
+    word-wrap: break-word;
+}
