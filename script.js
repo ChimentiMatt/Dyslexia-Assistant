@@ -139,7 +139,7 @@ function clearConverter() {
 }
 
 // Adjust font size 
-let fontSize = 20
+let fontSize = 25
 let lineHeight = 35
 function increaseSize() {
     document.getElementById("outputText").style.fontSize = `${fontSize + 5}px`;
@@ -199,7 +199,7 @@ function darkMode(){
     // document.getElementById("fontBtnDecrease").style.background = '#212121';
     // document.getElementById("fontSizeP").style.background = '#212121';
     document.getElementById("fontWIncrease").style.background = 'white';
-    document.getElementById("fontWDecrease").style.background = '#white';
+    document.getElementById("fontWDecrease").style.background = 'white';
     // document.getElementById("fontWeightP").style.background = '#212121';
 
     // Changes font awsome labels white
@@ -217,7 +217,7 @@ function darkMode(){
     document.querySelectorAll('h1').forEach(e => e.style.color = "white");   
     
     //Changes paragraph header to white
-    document.getElementById('outputText').style.borderTopColor = "white";
+    // document.getElementById('outputText').style.borderTopColor = "white";
 
     //Changes a tags colors 
     document.getElementById('currentPage').style.color = "white";
@@ -225,6 +225,7 @@ function darkMode(){
 
     document.getElementById("logo").style.color = "white";
 
+    document.getElementById('outputText').style.backgroundColor = "#212121";
 }
 
 
@@ -253,14 +254,14 @@ function lightMode(){
     
     // Changes font awesome labels backgrounds to white
 
-
-
-
     //Changes a tags colors 
     document.getElementById('currentPage').style.color = "black"
     document.getElementById('writingUrl').style.color = "black"
 
     document.getElementById("logo").style.color = 'rgb(33, 33, 33)'
+
+    document.getElementById('outputText').style.backgroundColor = "white";
+
 }
 
 function readerMode(){
@@ -299,4 +300,8 @@ function readerMode(){
     //Changes a tags colors 
     document.getElementById('currentPage').style.color = "black"
     document.getElementById('writingUrl').style.color = "black"
+
+
+    document.getElementById('outputText').style.backgroundColor = "rgb(243,239,224)";
+
 }
