@@ -8,8 +8,9 @@
   <link rel="stylesheet" href="style.css">
   <title>Dyslexic Defender | Reading</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+<link rel="stylesheet" href="print.css" type="text/css" media="print"> 
 
+</head>
 <body>
 <!-- Facilislexic  -->
 <!-- goutdy old style -->
@@ -31,14 +32,14 @@
   <div class="controlPanelContainer">
     <div>
 
-      <button class="faButton" id="fontBtnIncrease" onclick="increaseSize()"><i class="fa fa-plus" aria-hidden="true"></i></button>
-      <button class="faButton" id="fontBtnDecrease" onclick="decreaseSize()"><i class="fa fa-minus" aria-hidden="true"></i></button>
+      <button class="faButton hoverable" id="fontBtnIncrease" onclick="increaseSize()"><i class="fa fa-plus" aria-hidden="true"></i></button>
+      <button class="faButton " id="fontBtnDecrease" onclick="decreaseSize()"><i class="fa fa-minus" aria-hidden="true"></i></button>
     </div>
 
     <div>
-      <button class="faButton" id="fontWIncrease" onclick="increaseWeight()"><i class="fa fa-plus" aria-hidden="true"></i></button>
+      <button class="faButton hoverable" id="fontWIncrease" onclick="increaseWeight()"><i class="fa fa-plus" aria-hidden="true"></i></button>
       <button class="faButton" id="fontWeight">Width</button>
-      <button class="faButton" id="fontWDecrease" onclick="decreaseWeight()"><i class="fa fa-minus" aria-hidden="true"></i></button>
+      <button class="faButton hoverable" id="fontWDecrease" onclick="decreaseWeight()"><i class="fa fa-minus" aria-hidden="true"></i></button>
     </div>
 
     <div id="backgroundModes">
@@ -46,9 +47,12 @@
       <button id="readerMode" onclick="readerMode()"></button>
       <button id="lightMode" onclick="lightMode()"></i></button>
     </div>
+    <a href="#" id="print-button" onclick="window.print();return false;">Print</a> 
+
   </div>
 </div>    
-  <div class="test">
+<!-- <button onclick="printFunction()">Print</button> -->
+  <div class="printContainer">
     <p id="outputText"></p>
   <div>
 </div>

@@ -95,11 +95,12 @@ p {
 .exampleLeft{
     text-align: center;
     width: 50%;
-
+    font-weight: bold;
 }
 
 .exampleLeft h1{
     padding-top: 50px;
+    text-decoration: underline;
 }
 
 .exampleLeft p{
@@ -109,11 +110,12 @@ p {
 .exampleRight{
     text-align: center;
     width: 50%;
-
+    font-weight: bold;
 }
 
 .exampleRight h1{
     padding-top: 50px;
+    text-decoration: underline;
 }
 
 .exampleRight p{

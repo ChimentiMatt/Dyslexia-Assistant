@@ -58,12 +58,10 @@ function dyslexiaConverter() {
             // console.log(word, 'word')
             console.log(convertedArray, 'test')
         }
+        // Removes Js's commas that it puts in between items in an array
+        convertedArrayParced = convertedArray.join(' ')
+        document.getElementById('outputText').innerHTML = convertedArrayParced
 }
-
-    // Removes Js's commas that it puts in between items in an array
-    convertedArrayParced = convertedArray.join(' ')
-
-    document.getElementById('outputText').innerHTML = convertedArrayParced
 
     // Shows font size buttons on search
     let showFontBtnIncrease = document.getElementById('fontBtnIncrease')
@@ -80,6 +78,8 @@ function dyslexiaConverter() {
     let showFontWDecrease = document.getElementById('fontWDecrease')
     showFontWDecrease.style.visibility = "visible"
 
+    let showPrint = document.getElementById('print-button')
+    showPrint.style.visibility = "visible"
 
     // Shows background color on search and its border
     let showBackgroundModes = document.getElementById('backgroundModes')
@@ -96,7 +96,15 @@ function dyslexiaConverter() {
     showBorderTop.style.visibility = 'visible'
 }
 
-
+// function printFunction(){
+//     var iframe = document.createElement("iframe"); // create the element
+//     document.body.appendChild(iframe);  // insert the element to the DOM 
+//     let printOutputText = document.getElementById('outputText').innerHTML
+//     iframe.contentWindow.document.write(printOutputText); // write the HTML to be printed
+//     iframe.contentWindow.print();  // print it
+//     document.body.removeChild(iframe); // remove the iframe from the DOM
+//     console.log(printOutputText)
+// }
 
 // Clears the text field, input field, size button and weight button
 function clearConverter() {
@@ -271,8 +279,8 @@ function readerMode(){
     document.querySelectorAll('p').forEach(e => e.style.color = 'rgb(33, 33, 33)');  
 
     // Changes font awsome icons to black and fa background to reader
-    document.getElementById("fontWIncrease").style.color = 'rgb(33, 33, 33)';
-    document.getElementById("fontWDecrease").style.color = 'rgb(33, 33, 33)';
+    // document.getElementById("fontWIncrease").style.color = 'rgb(33, 33, 33)';
+    // document.getElementById("fontWDecrease").style.color = 'rgb(33, 33, 33)';
     // document.getElementById("fontBtnIncrease").style.color = 'rgb(33, 33, 33)';
     // document.getElementById("fontBtnDecrease").style.color = 'rgb(33, 33, 33)';
     // document.getElementById("fontBtnIncrease").style.background = 'rgb(243,239,224)';
@@ -305,3 +313,5 @@ function readerMode(){
     document.getElementById('outputText').style.backgroundColor = "rgb(243,239,224)";
 
 }
+
+
