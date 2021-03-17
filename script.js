@@ -194,33 +194,37 @@ function darkMode(){
     document.querySelectorAll('p').forEach(e => e.style.color = "white");
 
     // Changes font awsome icons and background to black or white
-    document.querySelectorAll('button').forEach(e => e.style.color = "white");
-    document.getElementById("fontBtnIncrease").style.background = '#212121';
-    document.getElementById("fontBtnDecrease").style.background = '#212121';
-    document.getElementById("fontSizeP").style.background = '#212121';
-    document.getElementById("fontWIncrease").style.background = '#212121';
-    document.getElementById("fontWDecrease").style.background = '#212121';
-    document.getElementById("fontWeightP").style.background = '#212121';
+    // document.querySelectorAll('button').forEach(e => e.style.color = "white");
+    // document.getElementById("fontBtnIncrease").style.background = '#212121';
+    // document.getElementById("fontBtnDecrease").style.background = '#212121';
+    // document.getElementById("fontSizeP").style.background = '#212121';
+    document.getElementById("fontWIncrease").style.background = 'white';
+    document.getElementById("fontWDecrease").style.background = '#white';
+    // document.getElementById("fontWeightP").style.background = '#212121';
 
     // Changes font awsome labels white
-    document.getElementById("fontSizeP").style.color = 'white'
-    document.getElementById("fontWeightP").style.color = 'white'
-    document.getElementById("backgroundColor").style.color = 'white';
+
+    // document.getElementById("fontSizeP").style.color = 'white'
+    // document.getElementById("fontWeightP").style.color = 'white'
+    // document.getElementById("backgroundColor").style.color = 'white';
 
     // Changes font awesome labels backgrounds to black
-    document.getElementById("backgroundColor").style.background = '#212121';
-    document.getElementById("lightMode").style.background = '#212121';
-    document.getElementById("readerMode").style.background = '#1287a8';
+    // document.getElementById("backgroundColor").style.background = '#212121';
+    // document.getElementById("lightMode").style.background = '#212121';
+    // document.getElementById("readerMode").style.background = '#1287a8';
 
     // Changes main header to black    
     document.querySelectorAll('h1').forEach(e => e.style.color = "white");   
     
     //Changes paragraph header to white
-    document.getElementById('outputText').style.borderTopColor = "white"
+    document.getElementById('outputText').style.borderTopColor = "white";
 
     //Changes a tags colors 
-    document.getElementById('currentPage').style.color = "white"
-    document.getElementById('writingUrl').style.color = "white"
+    document.getElementById('currentPage').style.color = "white";
+    document.getElementById('writingUrl').style.color = "white";
+
+    document.getElementById("logo").style.color = "white";
+
 }
 
 
@@ -244,18 +248,19 @@ function lightMode(){
     document.querySelectorAll('h1').forEach(e => e.style.color = "rgb(33, 33, 33)");   
 
     // Changes font awesome labels to white
-    document.getElementById("fontSizeP").style.color = 'rgb(33, 33, 33)'
-    document.getElementById("fontWeightP").style.color = 'rgb(33, 33, 33)'
+    // document.getElementById("fontSizeP").style.color = 'rgb(33, 33, 33)'
+    // document.getElementById("fontWeightP").style.color = 'rgb(33, 33, 33)'
     
     // Changes font awesome labels backgrounds to white
-    document.getElementById("fontSizeP").style.background = 'white';
-    document.getElementById("fontWeightP").style.background = 'white';
-    document.getElementById("backgroundColor").style.color = 'rgb(33, 33, 33)';
-    document.getElementById("backgroundColor").style.background = 'white';
+
+
+
 
     //Changes a tags colors 
     document.getElementById('currentPage').style.color = "black"
     document.getElementById('writingUrl').style.color = "black"
+
+    document.getElementById("logo").style.color = 'rgb(33, 33, 33)'
 }
 
 function readerMode(){
@@ -267,26 +272,29 @@ function readerMode(){
     // Changes font awsome icons to black and fa background to reader
     document.getElementById("fontWIncrease").style.color = 'rgb(33, 33, 33)';
     document.getElementById("fontWDecrease").style.color = 'rgb(33, 33, 33)';
-    document.getElementById("fontBtnIncrease").style.color = 'rgb(33, 33, 33)';
-    document.getElementById("fontBtnDecrease").style.color = 'rgb(33, 33, 33)';
-    document.getElementById("fontBtnIncrease").style.background = 'rgb(243,239,224)';
-    document.getElementById("fontBtnDecrease").style.background = 'rgb(243,239,224)';
-    document.getElementById("fontSizeP").style.background = 'rgb(243,239,224)';
-    document.getElementById("fontWIncrease").style.background = 'rgb(243,239,224)';
-    document.getElementById("fontWDecrease").style.background = 'rgb(243,239,224)';
-    document.getElementById("fontWeightP").style.background = 'rgb(243,239,224)';
-    document.getElementById("backgroundColor").style.background = 'rgb(243,239,224)';
-    document.getElementById("darkMode").style.background = 'rgb(243,239,224)';
-    document.getElementById("lightMode").style.background = 'rgb(243,239,224)';
-    document.getElementById("readerMode").style.background = 'rgb(243,239,224)';
+    // document.getElementById("fontBtnIncrease").style.color = 'rgb(33, 33, 33)';
+    // document.getElementById("fontBtnDecrease").style.color = 'rgb(33, 33, 33)';
+    // document.getElementById("fontBtnIncrease").style.background = 'rgb(243,239,224)';
+    // document.getElementById("fontBtnDecrease").style.background = 'rgb(243,239,224)';
+    // document.getElementById("fontSizeP").style.background = 'rgb(243,239,224)';
+    // document.getElementById("fontWIncrease").style.background = 'rgb(243,239,224)';
+    // document.getElementById("fontWDecrease").style.background = 'rgb(243,239,224)';
+    // document.getElementById("fontWeightP").style.background = 'rgb(243,239,224)';
+    // document.getElementById("backgroundColor").style.background = 'rgb(243,239,224)';
+    // document.getElementById("darkMode").style.background = 'rgb(243,239,224)';
+    // document.getElementById("lightMode").style.background = 'rgb(243,239,224)';
+    // document.getElementById("readerMode").style.background = 'rgb(243,239,224)';
     
     // Changes font awesome labels to black
-    document.getElementById("fontWeightP").style.color = 'rgb(33, 33, 33)'
-    document.getElementById("fontSizeP").style.color = 'rgb(33, 33, 33)'
-    document.getElementById("backgroundColor").style.color = 'rgb(33, 33, 33)';
+    // document.getElementById("fontWeightP").style.color = 'rgb(33, 33, 33)'
+    // document.getElementById("fontSizeP").style.color = 'rgb(33, 33, 33)'
+    // document.getElementById("backgroundColor").style.color = 'rgb(33, 33, 33)';
     
     // Changes main header to black
     document.querySelectorAll('h1').forEach(e => e.style.color = "rgb(33, 33, 33)");   
+
+
+    document.getElementById("logo").style.color = 'rgb(33, 33, 33)'
 
     //Changes a tags colors 
     document.getElementById('currentPage').style.color = "black"

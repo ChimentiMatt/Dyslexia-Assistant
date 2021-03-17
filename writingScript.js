@@ -98,31 +98,31 @@ function clearConverter() {
 
 
 // Adjust font size Drop Down
-let sizeDropDown = document.getElementById("sizeDropDown")
+// let sizeDropDown = document.getElementById("sizeDropDown")
+// sizeDropDown.onchange = function () {
+//     document.getElementById("outputText").style.fontSize = `${this.value}px`;
+//     document.getElementById("outputText").style.lineHeight = `${this.value}px`;
+    
+//     let fontSizeDifference = this.value - fontSize
+//     console.log(fontSizeDifference)
+//     fontSize += fontSizeDifference
+
+//     let lineHeightDifference = this.value - lineHeight
+//     lineHeight += lineHeightDifference
+// }
+
+// Adjust font size + button
 let fontSize = 16
 let lineHeight = 31
-sizeDropDown.onchange = function () {
-    document.getElementById("outputText").style.fontSize = `${this.value}px`;
-    document.getElementById("outputText").style.lineHeight = `${this.value}px`;
-    
-    let fontSizeDifference = this.value - fontSize
-    console.log(fontSizeDifference)
-    fontSize += fontSizeDifference
-
-    let lineHeightDifference = this.value - lineHeight
-    lineHeight += lineHeightDifference
-
-}
-// Adjust font size + button
 function increaseSize() {
     document.getElementById("outputText").style.fontSize = `${fontSize + 1}px`;
     document.getElementById("outputText").style.lineHeight = `${lineHeight + 1}px`;
     fontSize += 1
     lineHeight += 1
 
-    plusBtnDdDynamicIndex = document.getElementById('sizeDropDown').selectedIndex;
-    plusBtnDdDynamicOption = document.getElementById('sizeDropDown').options
-    console.log(plusBtnDdDynamicOption, 'here')
+    // plusBtnDdDynamicIndex = document.getElementById('sizeDropDown').selectedIndex;
+    // plusBtnDdDynamicOption = document.getElementById('sizeDropDown').options
+    // console.log(plusBtnDdDynamicOption, 'here')
 }
     // function getInputsByValue(value) { 
     //     document.querySelectorAll("input[value='24']").selected = true; 

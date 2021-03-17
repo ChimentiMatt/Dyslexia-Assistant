@@ -3,44 +3,84 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Josefin Slab',serif;
 }
 
 body {
-    overflow:hidden;  
+
+    font-size: large;
+    overflow-x: hidden;
+}
+.links{
+    margin-right: 25px;
+    margin-top: 15px;
+    float: right;
+    color: black;
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+
+} 
+
+.links a {
+    color: black;  
+    font-size: 20px;
+    text-decoration: none;
+}
+
+p {
+    font-size: 25px;
 }
 
 .aboutHeader{
     margin-top: 75px;
     text-align: center;
     font-size: 30px;
+    
 }
 .aboutHeader p{
     padding-top: 20px;
+    padding-bottom: 40px;
     text-align: center;
-    
+    font-size: 30px;
+    border-bottom: 1px solid black;
+    margin-left: 5vw;
+    margin-right: 5vw;
 }
 
 .howItWorks{
-    margin-top: 80px;
-    margin-left: 5vw;
-}
-.howItWorks p {
-    padding-top: 10px;
-    font-size: 20px;
+    margin-top: 40px;
+    margin-left: 5vw;  
 }
 
+.howItWorks h1 {
+    padding-bottom: 10px;
+}
+
+.howItWorks p {
+    padding-top: 10px;
+    padding-left: 25px;
+
+}
+
+.howItWorks i {
+
+    color: #ff8725;;
+}
 
 
 
 
 .example{
     letter-spacing: 10px;
+    line-height: 1.5;
 }
 
 .colorContainer{
-    background-color: #43abc9;
-    margin-top: 150px;
-    height: 500px;
+    background-color: #ff8725;
+    border: 1px solid black;
+    margin-top: 125px;
+    height: 375px;
     width:100%;
     margin-left:-100px;
     padding-left: 100px;
@@ -50,10 +90,119 @@ body {
     transform:rotate(-2deg);
 }
 
-.testingBody{
+.colorContainer h1{
+    text-align: center;
     padding-top: 100px;
+    transform:rotate(2deg);
+}
+.colorContainer p{
+    text-align: center;
+    padding-top: 15px;
+    transform:rotate(2deg);
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.colorBottom{
+    height: 275px;
+    margin-top: 30px;
+    background-color: #ff8725;
+    border: 1px solid black;
+    transform:rotate(2deg);
+    padding-top: 100px;
+    margin-left:-100px;
+    padding-left: 100px;
+    margin-right:-100px;
+    padding-right: 100px;
+    transform:rotate(2deg);
+}
+.colorBottom h1{
+    text-align: center;
+    transform:rotate(-2deg);
+}
+.colorBottom p{
+    text-align: center;
+    padding-top: 15px;
+    transform:rotate(-2deg);
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.colorContainerItWorks{
+    background-color: #ff8725;
+    border: 1px solid black;
+    margin-top: -35px;
+    height: 375px;
+    width:100%;
+    margin-left:-100px;
+    padding-left: 100px;
+    margin-right:-100px;
+    padding-right: 100px;
+    left:-25%;
+    transform:rotate(-3deg);
+
+    text-align: center;
+}
+
+.itWorks{
+    padding-top: 20px;
     margin-left: 5vw;
     margin-right: 5vw;
-    transform:rotate(+2deg);
+    transform:rotate(3deg);
+ 
+}
+
+
+
+
+.colorContainerMessaging{
+    margin-top: -50px;
+    height: 1100px;
+    background: #cfeaff
+}
+
+
+.messagingBody{
+    padding-top: 175px;
+    padding-bottom: 75px;
+    margin-left: 5vw;
+    margin-right: 5vw;
     word-wrap: break-word;
+
+}
+
+.itWorks h1{ 
+    padding-top: 15px;
+}
+.itWorks h2{ 
+    padding-top: 15px;
+}
+.itWorks p{
+    margin-left: 10vw;
+    margin-right: 10vw;
+    padding-top: 15px;
+
+}
+
+.studyLink {
+    display: flex;
+    justify-content: center;
+
+    font-size: 23px;
+    color: black;
+
+}
+
+.messagingBody p {
+    padding-top: 10px;   
+    padding-left: 40px;
+}
+
+.messagingBody h4 {
+    padding-top: 10px;   
+
+}
+.studyLink:hover {
+
+    color: rgb(27, 50, 58);
 }
