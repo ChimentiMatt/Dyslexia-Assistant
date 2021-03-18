@@ -10,14 +10,16 @@ body {
     font-size: large;
     overflow-x: hidden;
 }
+
 .links{
     margin-right: 25px;
     margin-top: 15px;
-    float: right;
+    margin-left:auto;
     color: black;
     display: flex;
     width: 150px;
     justify-content: space-between;
+    height: 30px;
 } 
 
 .links a {
@@ -31,198 +33,126 @@ p {
 }
 
 .aboutHeader{
-    margin-top: 75px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
     font-size: 30px;
     
 }
 .aboutHeader p{
-    padding-top: 20px;
+    padding-top: 40px;
     padding-bottom: 50px;
     text-align: center;
     font-size: 30px;
-    border-bottom: 1px solid black;
+    /* margin-left: 5vw;
+    margin-right: 5vw; */
+}
+
+.orange{
+    color:#ff8725 ;
+}
+.helps{
+    text-decoration: underline;
+}
+
+.whatItDoes{
+
+    text-align: center;
+    background: #ff8725 ;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    margin-bottom: 100px;
+
+}
+
+.whatItDoes h1 {
     margin-left: 5vw;
     margin-right: 5vw;
+
 }
+
+.becomes {
+    opacity: .65;
+}
+
+.whatItDoes i {
+    opacity: .65;
+}
+
 
 .howItWorks{
-    padding-top: 50px;
-    margin-top: 40px;
-    margin-bottom: 100px;
-    margin-left: 5vw;  
-}
-
-.howItWorks h1 {
-    padding-bottom: 10px;
-}
-
-.howItWorks p {
-    padding-top: 10px;
-    padding-left: 25px;
-}
-
-.howItWorks i {
-    color: #ff8725;;
-}
-
-.howItWorks h2 {
-    padding-top: 50px;
-   text-align: center;
-}
-
-
-
-.example{
-    letter-spacing: 10px;
-    line-height: 1.5;
-}
-
-/* .exampleContainerHeading h1{
     text-align: center;
-    padding-top: 20px;
-} */
+}
 
-.exampleContentContainer{
-    display: flex;
-    height: 350px;
+
+
+.evidenceContainer{
     background-color: #ff8725;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-}
-
-
-.exampleLeft{
-    text-align: center;
-    width: 50%;
-    font-weight: bold;
-}
-
-.exampleLeft h1{
-    padding-top: 50px;
-    text-decoration: underline;
-}
-
-.exampleLeft p{
-    padding-top: 30px;
-}
-
-.exampleRight{
-    text-align: center;
-    width: 50%;
-    font-weight: bold;
-}
-
-.exampleRight h1{
-    padding-top: 50px;
-    text-decoration: underline;
-}
-
-.exampleRight p{
-    padding-top: 30px;
-}
-
-
-.colorBottom{
-    height: 275px;
-    margin-top: 30px;
-    background-color: #ff8725;
-    border: 1px solid black;
-    transform:rotate(2deg);
-    padding-top: 100px;
-    margin-left:-100px;
-    padding-left: 100px;
-    margin-right:-100px;
-    padding-right: 100px;
-    transform:rotate(2deg);
-}
-.colorBottom h1{
-    text-align: center;
-    transform:rotate(-2deg);
-}
-.colorBottom p{
-    text-align: center;
-    padding-top: 15px;
-    transform:rotate(-2deg);
-    margin-left: 10vw;
-    margin-right: 10vw;
-    
-}
-
-.colorContainerItWorks{
-    background-color: #ff8725;
-    border: 1px solid black;
-    margin-top: -35px;
-    height: 375px;
-    width:100%;
-    margin-left:-100px;
-    padding-left: 100px;
-    margin-right:-100px;
-    padding-right: 100px;
-    left:-25%;
-
-
-    text-align: center;
-}
-
-.itWorks{
-    padding-top: 20px;
-    margin-left: 5vw;
-    margin-right: 5vw;
-}
-
-
-
-
-.messagingBody{
-    padding-top: 100px;
+    margin-top: 100px;
+    padding-top: 150px;
     padding-bottom: 150px;
-    margin-left: 5vw;
-    margin-right: 5vw;
-}
-
-.messagingBody h3{
-
-    opacity: .8;
+    text-align: center;
 }
 
 
+.evidenceContainer h1{
+    color: black;
 
-
-.itWorks h1{ 
-    padding-top: 15px;
 }
-.itWorks h2{ 
-    padding-top: 15px;
-}
-
-
-.itWorks p{
+.evidence{
     margin-left: 10vw;
-    margin-right: 10vw;
-    padding-top: 15px;
+    margin-right: 10vw
+}
+.evidence h1{ 
+
+}
+.evidence h2{ 
 
 }
 
+.evidence p{
+
+}
 .studyLink {
     display: flex;
     justify-content: center;
 
     font-size: 23px;
     color: black;
-
 }
 
-.messagingBody p {
-    padding-top: 10px;   
-    padding-left: 40px;
-}
-
-.messagingBody h4 {
-    padding-top: 10px;   
-
-}
 .studyLink:hover {
 
     color: rgb(27, 50, 58);
+}
+
+
+
+
+
+.emailContainer{
+    margin-top: 200px;
+    padding-bottom: 200px;
+}
+.emailContainer h1{
+    text-align: center;
+}
+.emailContainer h2{
+    margin-left: 10vw;
+    border-bottom: solid 1;
+    text-decoration: underline;
+}
+
+
+.emailContainer p {
+    padding-top: 10px;   
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+.emailContainer h4 {
+    padding-top: 10px;   
+
 }

@@ -233,10 +233,10 @@ h2 {
     /* white-space: pre-wrap; */
     /* border: 1px solid rgb(33, 33, 33); */
     /* background-color: white; */
-    min-height: 95vh;
+    min-height: 99vh;
     padding-left: 10px;
-    padding-right: 10px;
-    margin-right: 0px;
+
+
     border: 2px solid rgba(133, 133, 133, .1);
     /* box-shadow: 15px 15px 15px 15px black; */
     font-size: 25px;

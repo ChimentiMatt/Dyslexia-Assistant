@@ -106,6 +106,9 @@ function dyslexiaConverter() {
 //     console.log(printOutputText)
 // }
 
+
+
+
 // Clears the text field, input field, size button and weight button
 function clearConverter() {
     // clears the text field
@@ -313,5 +316,4 @@ function readerMode(){
     document.getElementById('outputText').style.backgroundColor = "rgb(243,239,224)";
 
 }
-
 
