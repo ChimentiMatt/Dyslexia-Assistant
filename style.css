@@ -227,6 +227,7 @@ h2 {
 
 #outputText {
     visibility: hidden;
+    font-family: 'Source Sans Pro', sans-serif;
     background-color: white;
     padding-top: 15px;
     letter-spacing: 10px;
@@ -382,3 +383,4 @@ h2 {
     color: #ff8725;;
 
 }
+

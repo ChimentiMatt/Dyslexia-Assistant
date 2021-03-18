@@ -142,6 +142,7 @@ h2 {
 
 #outputText {
     background-color: white;
+    font-family: 'Source Sans Pro', sans-serif;
     padding-top: 15px;
     letter-spacing: 10px;
     /* white-space: pre-wrap; */
