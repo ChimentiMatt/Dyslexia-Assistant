@@ -79,37 +79,18 @@ document.getElementById('outputText').innerHTML = convertedArrayParced
     showFontText.style.visibility = "visible"
 }
 
-
-
-
-
 // Clears the text field, size button and weight button
-function clearConverter() {
-    // clears the text field
-    let convertedText = document.getElementById('inputField').value;
-    convertedText = ''
-    document.getElementById('outputText').innerHTML = convertedText
+// function clearConverter() {
+//     // clears the text field
+//     let convertedText = document.getElementById('inputField').value;
+//     convertedText = ''
+//     document.getElementById('outputText').innerHTML = convertedText
 
-
-    // Hides Border Top of Text on search
-    let showBorderTop = document.getElementById('outputText')
-    showBorderTop.style.visibility = 'hidden'
-}
-
-
-// Adjust font size Drop Down
-// let sizeDropDown = document.getElementById("sizeDropDown")
-// sizeDropDown.onchange = function () {
-//     document.getElementById("outputText").style.fontSize = `${this.value}px`;
-//     document.getElementById("outputText").style.lineHeight = `${this.value}px`;
-    
-//     let fontSizeDifference = this.value - fontSize
-//     console.log(fontSizeDifference)
-//     fontSize += fontSizeDifference
-
-//     let lineHeightDifference = this.value - lineHeight
-//     lineHeight += lineHeightDifference
+//     // Hides Border Top of Text on search
+//     let showBorderTop = document.getElementById('outputText')
+//     showBorderTop.style.visibility = 'hidden'
 // }
+
 
 // Adjust font size + button
 let fontSize = 16
@@ -120,29 +101,7 @@ function increaseSize() {
     fontSize += 1
     lineHeight += 1
 
-    // plusBtnDdDynamicIndex = document.getElementById('sizeDropDown').selectedIndex;
-    // plusBtnDdDynamicOption = document.getElementById('sizeDropDown').options
-    // console.log(plusBtnDdDynamicOption, 'here')
 }
-    // function getInputsByValue(value) { 
-    //     document.querySelectorAll("input[value='24']").selected = true; 
-    // }
-
-    // console.log(fontSize,"fontSize")
-
-    // //Appends the new value to the drop down
-    // let selections = document.getElementById('sizeDropDown');
-    // var option = document.createElement('option');
-    // option.value = fontSize;
-    // option.text = fontSize;
-    // selections.appendChild(option)
-    // console.log(option)
-    // document.getElementById("option").selected = "true"
-
-    // selections = document.getElementById('sizeDropDown');
-    // selections.options[fontSize].selected = true; 
-    // console.log(option.text)
-
 
 // Adjust font size - button
 function decreaseSize() {

@@ -20,15 +20,17 @@ body {
     margin-left:auto;
     color: black;
     display: flex;
-    width: 150px;
+    width: 200px;
     justify-content: space-between;
     height: 30px;
+
 } 
 
 .links a {
     color: black;  
     font-size: 20px;
     text-decoration: none;
+    font-size: 25px;
 }
 .links a:hover {
     color: white;  
@@ -210,18 +212,17 @@ p {
 
  /* Slides CSS */
  .mySlides{
-     margin-left: 5vw;
-     margin-right: 5vw;
-     height: 700px;
+
+     height: 750px;
      display: flex;
-     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 
+     box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.2), 0 
         12px 40px 0 rgba(0, 0, 0, 0.19);
  }
  
 /* Slide 1 */
 
  .slidesAboutHeader{
-    height: 700px;
+    height: 750px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -246,7 +247,7 @@ p {
 /* Slide 2 */
 
 .slideWhatItDoes{
-    height: 700px;
+    height: 750px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -425,6 +426,7 @@ p {
 /* Slides Page btn */
 .btnContainer{
     text-align: center;
+    padding-top: 10px;
 }
 .leftButton{
     padding-right: 6px;

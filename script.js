@@ -133,7 +133,7 @@ function clearConverter() {
     let showFontWeight = document.getElementById('fontWeight')
     showFontWeight.style.visibility = "hidden"
 
-    // Hides background color on search and its border
+    // Hides background color 
     let showBackgroundModes = document.getElementById('backgroundModes')
     showBackgroundModes.style.visibility = "hidden"
     let showDarkMode = document.getElementById('darkMode')
@@ -143,6 +143,9 @@ function clearConverter() {
     let showReaderMode = document.getElementById('readerMode')
     showReaderMode.style.visibility = "hidden"
 
+    // Hides print button   
+    let showPrint = document.getElementById('print-button')
+    showPrint.style.visibility = 'hidden'
 
     // Hides Border Top of Text on search
     let showBorderTop = document.getElementById('outputText')
