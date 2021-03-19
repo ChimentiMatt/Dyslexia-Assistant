@@ -13,17 +13,18 @@ body {
     background-color: #ff8725;;
 }
 
+
+
 .links{
-    margin-right: 25px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left:auto;
+
+    height: 50px;
     color: black;
     display: flex;
-    width: 200px;
-    justify-content: space-between;
-    height: 30px;
-
+    justify-content: flex-end   ;
+    position: sticky;
+    top: 0;
+    background-color: #ff8725;;
+    align-items: center;
 } 
 
 .links a {
@@ -31,202 +32,72 @@ body {
     font-size: 20px;
     text-decoration: none;
     font-size: 25px;
+    align-items: center;
+    padding-right: 25px;
 }
+
 .links a:hover {
     color: white;  
-
 }
-p {
-    font-size: 25px;
-}
-
-.aboutHeader{
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    font-size: 30px;
-    
-}
-.aboutHeader p{
-    padding-top: 40px;
-    padding-bottom: 50px;
-    text-align: center;
-    font-size: 30px;
-    /* margin-left: 5vw;
-    margin-right: 5vw; */
-}
-
-.orange{
-    color:#ff8725 ;
-}
-.helps{
-    text-decoration: underline;
-}
-
-.whatItDoes{
-
-    text-align: center;
-    background: #ff8725 ;
-    padding-top: 200px;
-    padding-bottom: 200px;
-    margin-bottom: 100px;
-
-}
-
-.whatItDoes h1 {
-    margin-left: 5vw;
-    margin-right: 5vw;
-
-}
-
-.becomes {
-    opacity: .65;
-}
-
-.transformedText{
-    font-family: 'Source Sans Pro', sans-serif;
-}
-
-.whatItDoes i {
-    opacity: .65;
-}
-
-
-.howItWorks{
-    text-align: center;
-}
-
-
-
-.evidenceContainer{
-    background-color: #ff8725;
-    margin-top: 100px;
-    padding-top: 150px;
-    padding-bottom: 150px;
-    text-align: center;
-}
-
-
-.evidenceContainer h1{
-    color: black;
-
-}
-.evidence{
-    margin-left: 10vw;
-    margin-right: 10vw
-}
-.evidence h1{ 
-
-}
-.evidence h2{ 
-    font-family: 'Source Sans Pro', sans-serif;
-}
-
-.evidence p{
-    font-family: 'Source Sans Pro', sans-serif;
-}
-.studyLink {
-    display: flex;
-    justify-content: center;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 23px;
-    color: black;
-}
-
-.studyLink:hover {
-
-    color: rgb(27, 50, 58);
-}
-
-
-
-
-
-.emailContainer{
-    margin-top: 100px;
-    padding-bottom: 200px;
-}
-.emailContainer h1{
-    text-align: center;
-}
-.emailContainer h2{
-    margin-left: 10vw;
-    border-bottom: solid 1;
-    text-decoration: underline;
-    font-family: 'Source Sans Pro', sans-serif;
-}
-
-.example {
-    font-family: 'Source Sans Pro', sans-serif;
-}
-
-.emailContainer p {
-    padding-top: 10px;   
-    margin-left: 15vw;
-    margin-right: 15vw;
-}
-
-.emailContainer h4 {
-    padding-top: 10px;   
-}
-
-
-.childrenContainer{
-    margin-left: 10vw;
-    margin-right: 10vw;
-    padding-bottom: 200px;
-    text-align: center;
-}
-
-.jumbledExample{
-    letter-spacing: -2px;
-}
-
-.normalExample{
-    letter-spacing: 1px; 
-}
-
-
-.takeItFromMe{
-    text-align: center;
-    padding-bottom: 300px;
-}
-
-.takeItFromMe img{
-    height: 150px;
-    border-radius: 125px;
-}
-.takeItFromMe a{
-   font-size: 30px;
-   text-decoration: none;
-   color: black;
-}
-.takeItFromMe a:hover{
-
-    color: #ff8725;
- }
-
-
 
  /* Slides CSS */
  .mySlides{
-
      height: 750px;
      display: flex;
-     box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.2), 0 
-        12px 40px 0 rgba(0, 0, 0, 0.19);
+     box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
  }
  
+
+
+
+/* Slides Page Arrows, Container in slides */
+.leftButton{
+    padding-right: 6px;
+    padding-left: 6px;
+    border-radius: 6px;
+    padding-bottom: 1px;
+    background-color: #ff8725 ;
+    color: white;
+}
+
+.rightButton{
+    padding-right: 6px;
+    padding-left: 6px;
+    padding-bottom: 1px;
+    border-radius: 6px;
+    background-color: #ff8725 ;
+    color: white;
+}
+.leftButton:hover{
+    background-color: white ;
+    color: #ff8725 ;
+}
+
+.rightButton:hover{
+    background-color: white ;
+    color: #ff8725 ;
+}
+
+.numbertext {
+    color: black;
+    font-size: 22px;
+    padding: 15px 30px;
+    position: absolute;
+    top: 5px;
+    margin-top: 60px;
+ }
+
+
+
 /* Slide 1 */
 
  .slidesAboutHeader{
-    height: 750px;
-    display: flex;
+    height: 500px;
+    padding-top: 250px;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     text-align: center;
     font-size: 30px;
     background: white ;
@@ -239,76 +110,98 @@ p {
 .orange{
     color:#ff8725 ;
 }
+
+.underline {
+    font-weight: bold;
+}
+
 .helps{
     text-decoration: underline;
 }
-
+.slide1BtnContainer{
+    text-align: center;
+    padding-top: 300px;
+}
 
 /* Slide 2 */
 
 .slideWhatItDoes{
-    height: 750px;
+    height: 500px;
+    padding-top: 250px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
     font-size: 30px;
     background: white ;
 }
-
-.slideWhatItDoes h1 {
+.mySlidesPContainer{
+    display: flex;
+    flex-direction: row;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    justify-content: space-evenly;
 }
 
-.slideWhatItDoes {
+
+.slideWhatItDoes p{
+    padding-top: 40px;
 }
 
 .slideWhatItDoes{
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-.slideWhatItDoes i {
-}
-
 .slideWhatItDoes{
     text-align: center;
 }
 
-
+.slide2BtnContainer{
+    text-align: center;
+    padding-top: 265px;
+}
 /* slide 3 */
 .slideHowItWorks{
-    height: 700px;
+    height: 650px;
     text-align: center;
     padding-top: 100px;
+    font-size: 30px;
     background: white ;
 }
+
+/* .slideHowItWorks i{
+    color:#ff8725 ;
+} */
+
+
+
+
+.slide3BtnContainer{
+    text-align: center;
+    padding-top: 74px;
+}
+
 
 
 /* slide 4  */
 
 .SlideEvidenceContainer{
-    height: 700px;
+    height: 600px;
     background: white ;
     text-align: center;
+    padding-top: 150px;
 }
 
-
-.SlideEvidenceContainer h1{
-    color: black;
+.SlideEvidenceContainer{
 
 }
-.evidence{
-    margin-left: 10vw;
-    margin-right: 10vw
+.SlideEvidenceContainer h1{ 
+    font-size: 60px;
 }
-.evidence h1{ 
-
-}
-.evidence h2{ 
+.SlideEvidenceContainer h2{ 
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-.evidence p{
+.SlideEvidenceContainer p{
     font-family: 'Source Sans Pro', sans-serif;
 }
 .studyLink {
@@ -324,12 +217,42 @@ p {
     color: rgb(27, 50, 58);
 }
 
+.slide4BtnContainer{
+    text-align: center;
+    padding-top: 202px;
+}
 
 
 /* slide 5 */
 
-.slideEmailContainer{
+.unlikeOthers{ 
+    height: 600px;
     background: white ;
+    text-align: center;
+    padding-top: 150px;
+
+}
+.unlikeOthers h1{ 
+    font-size: 60px;
+}
+
+.unlikeOthers h2 p{ 
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.slide5BtnContainer{
+    text-align: center;
+    padding-top: 189px;
+}
+
+
+/* slide 6 */
+
+.slideEmailContainer{
+    height: 700px;
+    background: white ;
+    text-align: center;
+    padding-top: 50px;
 }
 .slideEmailContainer h1{
     text-align: center;
@@ -349,59 +272,53 @@ p {
     padding-top: 10px;   
     margin-left: 15vw;
     margin-right: 15vw;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .slideEmailContainer h4 {
     padding-top: 10px;   
 }
 
+.slideEmailContainer img {
+    height: 300px;
+}
 
-
-/* slide 6 */
-
-.slideChildrenContainer{
-    padding-top: 150px;
-    margin-left: 10vw;
-    margin-right: 10vw;
-    padding-bottom: 200px;
+.slide6BtnContainer{
     text-align: center;
+    padding-top: 26px;
+}
+
+/* slide 7 */
+.visualization{
+    height: 600px;
     background: white ;
-}
-
-.jumbledExample{
-    letter-spacing: -2px;
-}
-
-.normalExample{
-    letter-spacing: 1px; 
-}
-
-
-.takeItFromMe{
     text-align: center;
-    padding-bottom: 300px;
+    padding-top: 150px;
+}
+.visualImgContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
-.takeItFromMe img{
-    height: 150px;
-    border-radius: 125px;
+.labelContainer{
+    display: flex;
+    flex-direction: column;
 }
-.takeItFromMe a{
-   font-size: 30px;
-   text-decoration: none;
-   color: black;
+
+.visualization img{
+    padding-top: 20px;
+    height: 200px;
 }
-.takeItFromMe a:hover{
 
-    color: #ff8725;
- }
+.slide7BtnContainer{
+    text-align: center;
+    padding-top: 189px;
+}
 
 
-
- /* slide 7 */
-
- 
 .slideTakeItFromMe{
+    height: 600px;
     background: white ;
     text-align: center;
     padding-top: 150px;
@@ -417,27 +334,33 @@ p {
    color: black;
 }
 .slideTakeItFromMe a:hover{
-
     color: #ff8725;
  }
 
-
-
-/* Slides Page btn */
-.btnContainer{
+ .slide8BtnContainer{
     text-align: center;
-    padding-top: 10px;
-}
-.leftButton{
-    padding-right: 6px;
-    padding-left: 6px;
-    border-radius: 6px;
-    background-color: white;
+    padding-top: 162px;
+
 }
 
-.rightButton{
-    padding-right: 6px;
-    padding-left: 6px;
-    border-radius: 6px;
-    background-color: white;
+
+@media screen and (max-width: 990px) {
+
+    .leftButton{
+        display: none;
+    }
+    
+    .rightButton{
+        display: none;
+    }
+    .numbertext{
+        display: none;
+    }
+
+}
+@media screen and (min-width: 1000px) {
+    /* Project Images */
+    .mobile{
+        display: none;
+    }
 }
