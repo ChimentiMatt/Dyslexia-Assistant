@@ -1,20 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-
-/* Open sans light 200 */
-
-
-
-/* Open sans light 300 */
+/* Open sans fonts */
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap');
-
-
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap');
 
 
@@ -30,8 +21,6 @@ body {
     background-color: rgb(250, 250, 250);
 }
 
-#all{
-}
 .about{
     margin-right: 25px;
     margin-top: 15px;
@@ -40,10 +29,8 @@ body {
     text-decoration: none;
 }
 
-
+/* title and links to reading and writing */
 .logo{
-    /* letter-spacing: 10px;
-    margin-left: -10px; */
     font-weight: normal;
     font-size: 40px;
     height: 40px;
@@ -63,12 +50,10 @@ body {
 h1 {
     font-weight: normal;
     font-size: 40px;
-    /* color: #008CBA; */
     color: rgb(33, 33, 33);
-
     margin-top: 20px;
-    /* text-align: center; */
 }
+
 .centerContent{
     text-align: center;  
 }
@@ -84,13 +69,20 @@ h1 {
     color: rgb(33, 33, 33);
 }
 
+/* control panel */
 
-.controlPannelContainer{
+.controlPanelContainer{
     display: flex;
     flex-direction: row;
     margin-top: 15px;
+    margin-right: 10vw;
     margin-left: 10vw;
     margin-bottom: 5px;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-right: 10vw;
 }
 
 p {
@@ -99,23 +91,8 @@ p {
     line-height: 35px;
     margin-left: 10vw;
     margin-right: 10vw;
-    /* font-weight: 100; */
 }
 
-
-.inputFieldBtns{
-    border: 1px solid #1287a8;
-    background-color:  #1287a8;
-    border-radius: 3px;
-    color: white;
-    margin-top: 20px;
-}
-.inputFieldBtns:hover{
-    background-color:#43abc9;
-
-}
-
-/* Font awesome buttons */
 button {
     border: none;
     color:  rgb(33, 33, 33)
@@ -129,46 +106,6 @@ button {
  color: #43abc9
 }
 
-h2 {
-    margin: 0;
-    margin-top: 6px;
-}
-
-.test{
-    word-wrap: normal;
-    /* width: 900px; */
-}
-
-
-#outputText {
-    background-color: white;
-    font-family: 'Source Sans Pro', sans-serif;
-    padding-top: 15px;
-    letter-spacing: 10px;
-    /* white-space: pre-wrap; */
-    /* border: 1px solid rgb(33, 33, 33); */
-    /* background-color: white; */
-    min-height: 99vh;
-    padding-left: 10px;
-    border: 2px solid rgba(133, 133, 133, .1);
-    /* box-shadow: 15px 15px 15px 15px black; */
-    font-size: 16px;
-
-}
-
-
-.controlPannelContainer {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 5px;
-    border-top: 1px solid lightgray;
-    border-bottom: 1px solid lightgray;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    margin-right: 10vw;
-}
-
-
 /* Buttons to change font size */
 #fontBtnIncrease {
     background: rgb(250, 250, 250);
@@ -177,22 +114,14 @@ h2 {
     border-radius:  5px 0 0 5px;
 }
 
-#sizeDropDown{
-    background: rgb(250, 250, 250);
-    margin-left: -5px;  
-    align-items: center;
-    text-align: center;
+#font{
+    margin-left: -5px;
     height: 30px;
-    -webkit-appearance: none;
-    padding-left: 10px;
-    padding-right: 10px;
+    background: rgb(250, 250, 250);
 }
-
-#sizeDropDown option {
-    align-items: center;
-
+#font:hover{
+    color: black;
 }
-
 #fontBtnDecrease {
     background: rgb(250, 250, 250);
     margin-left: -5px;
@@ -225,16 +154,11 @@ h2 {
     background: rgb(250, 250, 250);
     height: 30px;
 }
-
-/* #fontWeightP{
-    background: rgb(250, 250, 250);
-    margin-right: 35px;
-
-    color: rgb(33, 33, 33)
-} */
+#fontWeight:hover{
+    color: black;
+}
 
 /* Buttons to change background color*/
-
 #backgroundColor {
 
     color: rgb(33, 33, 33)
@@ -259,10 +183,9 @@ h2 {
 
     background-color: rgb(243,239,224);
     border: 10px solid rgb(243,239,224);
-
 }
 
-
+/* Save / Print button */
 
 #print-button{
     display: flex;
@@ -275,4 +198,19 @@ h2 {
     padding-right: 5px;
     color: black;
     background: white;
+}
+#print-button:hover{
+    color:#43abc9
+}
+
+
+#outputText {
+    background-color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding-top: 15px;
+    letter-spacing: 10px;
+    min-height: 99vh;
+    padding-left: 10px;
+    border: 2px solid rgba(133, 133, 133, .1);
+    font-size: 16px;
 }

@@ -11,8 +11,6 @@ window.addEventListener('load', function(){
     document.getElementById('outputText').setAttribute('contenteditable', 'true');
 });
 
-// let alphanumeric = ['A', ' \" ', 's', '\”']
-
 function dyslexiaConverter() {
     let initialText = document.getElementById('inputField').value;
     let convertedText = ''
@@ -64,7 +62,6 @@ function dyslexiaConverter() {
         }
 }
 
-
 // Removes Js's commas that it puts in between items in an array
 convertedArrayParced = convertedArray.join(' ')
 
@@ -79,18 +76,6 @@ document.getElementById('outputText').innerHTML = convertedArrayParced
     showFontText.style.visibility = "visible"
 }
 
-// Clears the text field, size button and weight button
-// function clearConverter() {
-//     // clears the text field
-//     let convertedText = document.getElementById('inputField').value;
-//     convertedText = ''
-//     document.getElementById('outputText').innerHTML = convertedText
-
-//     // Hides Border Top of Text on search
-//     let showBorderTop = document.getElementById('outputText')
-//     showBorderTop.style.visibility = 'hidden'
-// }
-
 
 // Adjust font size + button
 let fontSize = 16
@@ -100,7 +85,6 @@ function increaseSize() {
     document.getElementById("outputText").style.lineHeight = `${lineHeight + 1}px`;
     fontSize += 1
     lineHeight += 1
-
 }
 
 // Adjust font size - button
@@ -180,7 +164,6 @@ function darkMode(){
     document.getElementById('currentPage').style.color = "white"
     document.getElementById('indexUrl').style.color = "white"
 }
-
 
 function lightMode(){
     document.body.style.background = 'rgb(250, 250, 250)';

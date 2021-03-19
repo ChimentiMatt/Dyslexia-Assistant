@@ -1,10 +1,7 @@
-
-
 * {
     margin: 0;
     padding: 0;
     font-family: 'Josefin Slab',serif;
-
 }
 
 body {
@@ -12,8 +9,6 @@ body {
     overflow-x: hidden;
     background-color: #ff8725;;
 }
-
-
 
 .links{
 
@@ -47,8 +42,6 @@ body {
      box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
  }
  
-
-
 
 /* Slides Page Arrows, Container in slides */
 .leftButton{
@@ -90,14 +83,9 @@ body {
 
 
 /* Slide 1 */
-
  .slidesAboutHeader{
     height: 500px;
     padding-top: 250px;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
     text-align: center;
     font-size: 30px;
     background: white ;
@@ -124,7 +112,6 @@ body {
 }
 
 /* Slide 2 */
-
 .slideWhatItDoes{
     height: 500px;
     padding-top: 250px;
@@ -142,7 +129,6 @@ body {
     justify-content: space-evenly;
 }
 
-
 .slideWhatItDoes p{
     padding-top: 40px;
 }
@@ -159,6 +145,7 @@ body {
     text-align: center;
     padding-top: 265px;
 }
+
 /* slide 3 */
 .slideHowItWorks{
     height: 650px;
@@ -168,18 +155,10 @@ body {
     background: white ;
 }
 
-/* .slideHowItWorks i{
-    color:#ff8725 ;
-} */
-
-
-
-
 .slide3BtnContainer{
     text-align: center;
     padding-top: 74px;
 }
-
 
 
 /* slide 4  */
@@ -257,6 +236,10 @@ body {
 .slideEmailContainer h1{
     text-align: center;
 }
+
+.strike{
+    text-decoration: line-through;
+}
 .slideEmailContainer h2{
     margin-left: 10vw;
     border-bottom: solid 1;
@@ -285,8 +268,10 @@ body {
 
 .slide6BtnContainer{
     text-align: center;
-    padding-top: 26px;
+    padding-top: 6px;
 }
+
+
 
 /* slide 7 */
 .visualization{
