@@ -264,8 +264,8 @@ h2 {
     background-color: white;
     border: 10px solid white;
     visibility: hidden;
-    border-radius:  0 10px 10px 0px;
-    width: 33%;
+    border-radius:  5px 5px 5px 0px;
+    width: 15%;
     
 }
 
@@ -313,5 +313,44 @@ h2 {
 }
 
 
+.reader-container{
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+
+}
 
 
+
+#speach-drop-down{
+    visibility: hidden;
+    width: 245px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid lightgray;
+}
+
+#play {
+    visibility: hidden;
+    padding-top: 5px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    border: 1px solid lightgray;
+    border-radius: 0 5px 5px 0;
+    text-decoration: none;
+    color: black;
+    background: white;
+}
+
+#play:hover{
+    color: #ff8725;
+}
+
+#rate, #pitch {
+    display: none;
+}
+form {
+    width: 30px;
+    
+}

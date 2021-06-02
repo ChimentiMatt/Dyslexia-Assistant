@@ -77,8 +77,15 @@ function dyslexiaConverter() {
     let showFontWDecrease = document.getElementById('fontWDecrease')
     showFontWDecrease.style.visibility = "visible"
 
+    // Shows print buttons on search
     let showPrint = document.getElementById('print-button')
     showPrint.style.visibility = "visible"
+
+    // Shows Text to speech on search
+    let showSpeechDD = document.getElementById('speach-drop-down')
+    showSpeechDD.style.visibility = "visible"
+    let showSpeechPlay = document.getElementById('play')
+    showSpeechPlay.style.visibility = "visible"
 
     // Shows background color on search and its border
     let showBackgroundModes = document.getElementById('backgroundModes')
@@ -122,6 +129,12 @@ function clearConverter() {
     let showFontWeight = document.getElementById('fontWeight')
     showFontWeight.style.visibility = "hidden"
 
+    // Hides Text to speech on clear
+    let showSpeechDD = document.getElementById('speach-drop-down')
+    showSpeechDD.style.visibility = "hidden"
+    let showSpeechPlay = document.getElementById('play')
+    showSpeechPlay.style.visibility = "hidden"
+    
     // Hides background color 
     let showBackgroundModes = document.getElementById('backgroundModes')
     showBackgroundModes.style.visibility = "hidden"
@@ -261,3 +274,56 @@ function readerMode(){
 
 }
 
+// Text to speech powered by 
+// https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis
+var synth = window.speechSynthesis;
+
+var inputForm = document.querySelector('form');
+var inputTxt = document.querySelector('.txt');
+var voiceSelect = document.querySelector('select');
+
+var pitch = document.querySelector('#pitch');
+var pitchValue = document.querySelector('.pitch-value');
+var rate = document.querySelector('#rate');
+var rateValue = document.querySelector('.rate-value');
+
+var voices = [];
+
+function populateVoiceList() {
+  voices = synth.getVoices();
+
+  for(var i = 0; i < voices.length ; i++) {
+    var option = document.createElement('option');
+    option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
+
+    if(voices[i].default) {
+      option.textContent += ' -- DEFAULT';
+    }
+
+    option.setAttribute('data-lang', voices[i].lang);
+    option.setAttribute('data-name', voices[i].name);
+    voiceSelect.appendChild(option);
+  }
+}
+
+populateVoiceList();
+if (speechSynthesis.onvoiceschanged !== undefined) {
+  speechSynthesis.onvoiceschanged = populateVoiceList;
+}
+
+inputForm.onsubmit = function(event) {
+  event.preventDefault();
+
+  var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
+  var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
+  for(var i = 0; i < voices.length ; i++) {
+    if(voices[i].name === selectedOption) {
+      utterThis.voice = voices[i];
+    }
+  }
+  utterThis.pitch = pitch.value;
+  utterThis.rate = rate.value;
+  synth.speak(utterThis);
+
+  inputTxt.blur();
+}

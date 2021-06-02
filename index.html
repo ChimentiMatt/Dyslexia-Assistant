@@ -23,7 +23,8 @@
         <a id="writingUrl" href="writing.html">Writing</a>
       </div>
     <br>
-    <input type="text" class="inputField" id="inputField" placeholder="Paste Here" >
+    <input type="text" class="txt inputField" id="inputField" placeholder="Paste Here" >
+
     <br>
     <button class="inputFieldBtns btn1" onclick="dyslexiaConverter()">Convert</button>
     <button class="inputFieldBtns btn2" onclick="clearConverter()">Clear</button>
@@ -35,23 +36,55 @@
         <button class="faButton " id="fontBtnDecrease" onclick="decreaseSize()"><i class="fa fa-minus" aria-hidden="true"></i></button>
       </div>
 
-    <div>
-      <button class="faButton hoverable" id="fontWIncrease" onclick="increaseWeight()"><i class="fa fa-plus" aria-hidden="true"></i></button>
-      <button class="faButton" id="fontWeight">Font Width</button>
-      <button class="faButton hoverable" id="fontWDecrease" onclick="decreaseWeight()"><i class="fa fa-minus" aria-hidden="true"></i></button>
-    </div>
+      <div>
+        <button class="faButton hoverable" id="fontWIncrease" onclick="increaseWeight()"><i class="fa fa-plus" aria-hidden="true"></i></button>
+        <button class="faButton" id="fontWeight">Font Width</button>
+        <button class="faButton hoverable" id="fontWDecrease" onclick="decreaseWeight()"><i class="fa fa-minus" aria-hidden="true"></i></button>
+      </div>
 
-    <div id="backgroundModes">
-      <button id="darkMode" onclick="darkMode()"></button>
-      <button id="readerMode" onclick="readerMode()"></button>
-      <button id="lightMode" onclick="lightMode()"></i></button>
+      <div id="backgroundModes">
+        <button id="darkMode" onclick="darkMode()"></button>
+        <button id="readerMode" onclick="readerMode()"></button>
+        <button id="lightMode" onclick="lightMode()"></i></button>
+      </div>
+      <a href="#" id="print-button" onclick="window.print();return false;">Save / Print</a> 
+
+
+        <form class="reader-container">
+          <div>
+            <label for="rate"></label><input type="range" min="0.5" max="2" value="1" step="0.1" id="rate">
+            <div class="rate-value"></div>
+            <div class="clearfix"></div>
+          </div>
+          <div>
+            <label for="pitch"></label><input type="range" min="0" max="2" value="1" step="0.1" id="pitch">
+            <div class="pitch-value"></div>
+            <div class="clearfix"></div>
+          </div>
+
+          <select id="speach-drop-down">
+
+          </select>
+          <div class="controls">
+            <button id="play" type="submit">Play</button>
+          </div>
+        </form>
+
+
     </div>
-    <a href="#" id="print-button" onclick="window.print();return false;">Save / Print</a> 
-  </div>
   </div>    
-    <div class="printContainer">
-      <p id="outputText"></p>
-    <div>
+  <div class="printContainer">
+    <p id="outputText"></p>
+  <div>
+
+
+
+    <script src="script.js"></script>
+
+
+
+
+
 </div>
 <br><br><br><br><br><br>
 <script src="JS\script.js"></script>
